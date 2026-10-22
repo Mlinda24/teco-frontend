@@ -20,8 +20,10 @@ const NAV_ROUTES = {
 };
 
 const HERO_IMAGES = [
-  '/assets/1.jpg', '/assets/2.jpg', '/assets/5.jpg',
-  '/assets/8.jpg', '/assets/17.jpg', '/assets/18.jpg',
+  '/assets/1.jpg',
+  '/assets/consultancy.jpg',
+  '/assets/Picture4.jpg',
+  '/assets/picture5.jpg',
 ];
 
 const SERVICE_ROUTE = /^\/services\/([^/]+)$/;
@@ -86,11 +88,32 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const images = document.querySelectorAll('#site-shell .hero-carousel-image');
-    if (!images.length) return;
-    images.forEach((image, index) => {
-      image.style.opacity = index === heroImage ? '1' : '0';
+    setHeroImage(0);
+  }, [path]);
+
+  useEffect(() => {
+    const apply = () => {
+      const images = document.querySelectorAll('#site-shell .hero-carousel-image');
+      if (!images.length) return false;
+      images.forEach((image, index) => {
+        image.style.opacity = index === heroImage ? '1' : '0';
+      });
+      return true;
+    };
+
+    if (apply()) return;
+
+    let raf1;
+    let raf2;
+    raf1 = requestAnimationFrame(() => {
+      if (apply()) return;
+      raf2 = requestAnimationFrame(() => { apply(); });
     });
+
+    return () => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+    };
   }, [heroImage, pageContent]);
 
   useEffect(() => {
@@ -112,12 +135,10 @@ export default function App() {
     if (!root) return undefined;
     const linkHandlers = [];
 
-    // ---- Hide the "Home" nav link when already on the home page ----
     const homeLink = root.querySelector('#navLinks a[href="/"]');
     if (homeLink) {
       homeLink.style.display = route.path === '/' ? 'none' : '';
     }
-    // ---------------------------------------------------------------
 
     root.querySelectorAll('a').forEach((link) => {
       const raw = link.getAttribute('href') || '';

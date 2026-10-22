@@ -15,7 +15,6 @@ const data = {
   shortTitle: 'Water Supply & Engineering Design',
   title: 'Water Supply and Engineering Design',
   tagline: 'Reliable Water. Resilient communities',
-  image: '/assets/17.jpg',
   imageAlt: 'TECO Farms water infrastructure project',
   imageCaptionKicker: 'Solar pumping',
   imageCaptionText: 'Designed for real community needs',

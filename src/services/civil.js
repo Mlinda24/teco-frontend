@@ -65,41 +65,53 @@ const data = {
 
 function hero(s) {
   return `
-  <section class="relative overflow-hidden bg-gradient-to-br from-[#102d45] via-[#12435b] to-[#176b78] text-white">
-    ${container(`
-      <nav aria-label="Breadcrumb" class="pt-8 text-xs text-[#bdd1db]">
-        <a href="/" class="text-[#bdd1db] no-underline hover:text-white">Home</a>
-        <span class="mx-2">/</span>
-        <a href="/services" class="text-[#bdd1db] no-underline hover:text-white">Services</a>
-        <span class="mx-2">/</span>
-        <span class="text-white">${s.shortTitle}</span>
-      </nav>
-      <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_.9fr] gap-10 lg:gap-[52px] items-center pt-6 pb-14 lg:pb-20">
-        <div>
-          <div class="inline-flex items-center gap-2 rounded-full border border-[#a8e4dc]/40 bg-[#a8e4dc]/10 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#a8e4dc] mb-6">
+  <section class="relative overflow-hidden text-white bg-[#0b2437]">
+
+    <!-- Background photograph: sharp, no blur -->
+    <img
+      src="/assets/civil.jpg"
+      alt=""
+      aria-hidden="true"
+      class="absolute inset-0 h-full w-full object-cover object-center"
+    />
+
+    <!-- Waterly colour gradient: strong at the BOTTOM, transparent at the TOP -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0b2437]/95 via-[#12435b]/55 to-[#176b78]/10"></div>
+
+    <!-- Diagonal sheen for the "liquid glass" feel -->
+    <div class="pointer-events-none absolute inset-0 opacity-[0.13] mix-blend-screen"
+         style="background-image:linear-gradient(115deg, rgba(168,228,220,0) 30%, rgba(168,228,220,0.9) 50%, rgba(168,228,220,0) 70%);"></div>
+
+    <!-- Warm glow top-right to echo the civil department accent -->
+    <div class="pointer-events-none absolute -top-32 -right-24 h-[420px] w-[420px] rounded-full bg-[#f2a900]/10 blur-3xl"></div>
+
+    <div class="relative">
+      ${container(`
+        <nav aria-label="Breadcrumb" class="pt-8 text-xs text-[#d5e5eb]/90">
+          <a href="/" class="text-[#d5e5eb]/90 no-underline hover:text-white">Home</a>
+          <span class="mx-2">/</span>
+          <a href="/services" class="text-[#d5e5eb]/90 no-underline hover:text-white">Services</a>
+          <span class="mx-2">/</span>
+          <span class="text-white">${s.shortTitle}</span>
+        </nav>
+
+        <div class="pt-6 pb-14 lg:pb-20 max-w-[720px]">
+          <div class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.16em] text-white mb-6">
             <span class="h-1.5 w-1.5 rounded-full" style="background:${s.accent}"></span>
             ${s.badge}
           </div>
-          <h1 class="text-[clamp(32px,4.4vw,54px)] font-extrabold leading-[1.05] tracking-[-0.035em] mb-4">${s.title}</h1>
-          <p class="text-lg font-semibold text-[#f2c75c] mb-5">${s.tagline}</p>
-          <p class="text-base leading-[1.8] text-[#d5e5eb] max-w-[580px] mb-8">${s.overview[0]}</p>
+
+          <h1 class="text-[clamp(32px,4.4vw,54px)] font-extrabold leading-[1.05] tracking-[-0.035em] mb-4 drop-shadow-[0_2px_18px_rgba(4,24,38,.55)]">${s.title}</h1>
+          <p class="text-lg font-semibold text-[#f2c75c] mb-5 drop-shadow-[0_1px_10px_rgba(4,24,38,.45)]">${s.tagline}</p>
+          <p class="text-base leading-[1.8] text-[#e2eef2] max-w-[580px] mb-8 drop-shadow-[0_1px_8px_rgba(4,24,38,.35)]">${s.overview[0]}</p>
+
           <div class="flex flex-wrap gap-3">
-            <a href="/contact" class="inline-flex items-center justify-center gap-2 px-[19px] py-[13px] rounded-lg bg-[#f2a900] text-[#102d45] text-[13px] font-extrabold no-underline transition duration-200 hover:-translate-y-0.5 hover:brightness-105">Request this service →</a>
-            <a href="/services" class="inline-flex items-center justify-center gap-2 px-[19px] py-[13px] rounded-lg border border-white/25 text-white text-[13px] font-extrabold no-underline transition duration-200 hover:bg-white/10">&larr; All services</a>
+            <a href="/contact" class="inline-flex items-center justify-center gap-2 px-[19px] py-[13px] rounded-lg bg-[#f2a900] text-[#102d45] text-[13px] font-extrabold no-underline transition duration-200 hover:-translate-y-0.5 hover:brightness-105 shadow-[0_10px_24px_rgba(242,169,0,.28)]">Request this service →</a>
+            <a href="/services" class="inline-flex items-center justify-center gap-2 px-[19px] py-[13px] rounded-lg border border-white/35 bg-white/10 backdrop-blur-sm text-white text-[13px] font-extrabold no-underline transition duration-200 hover:bg-white/20">&larr; All services</a>
           </div>
         </div>
-        <div class="relative">
-          <div class="relative w-full max-w-[440px] aspect-[1.05/1] ml-auto overflow-hidden rounded-[26px] border border-white/20 shadow-[0_30px_70px_rgba(6,26,42,.35)]">
-            <img src="${s.image}" alt="${s.imageAlt}" class="absolute inset-0 h-full w-full object-cover"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0b2437]/70 via-transparent to-transparent"></div>
-          </div>
-          <div class="absolute -left-3 bottom-6 max-w-[220px] rounded-xl bg-white p-4 shadow-[0_18px_40px_rgba(4,24,38,.35)]">
-            <div class="text-[10px] font-black uppercase tracking-[0.12em] mb-1" style="color:${s.accent}">${s.imageCaptionKicker}</div>
-            <div class="text-[12.5px] leading-[1.5] text-[#3d566a]">${s.imageCaptionText}</div>
-          </div>
-        </div>
-      </div>
-    `)}
+      `)}
+    </div>
   </section>`;
 }
 
