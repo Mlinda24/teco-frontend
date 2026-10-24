@@ -26,10 +26,10 @@ const data = {
     { value: '152', label: 'Water kiosks served by the Wenya system we rehabilitated in Chitipa' },
   ],
   offerings: [
-    ['Borehole drilling & development', 'Electrical resistivity surveys (VES and HEP) to locate aquifers, drilling supervision, cutting samples every 1 m, casing and screen design, and borehole development by airlifting or surging.'],
+    ['Engineering, development and environmental consultancy', 'Surface-water and groundwater investigations; hydrogeological and hydrological studies; water-resource assessment and modelling; river assessment, flood-risk mapping and weir/intake studies; engineering designs and technical drawings; environmental screening and impact assessments (EIA/ESIA); feasibility studies, project assessments and evaluations; GIS and spatial analysis; training, capacity building and technical advisory services.'],
     ['Geophysical & hydrogeological surveys', 'Groundwater investigations, borehole siting reports with GPS coordinates and priority/backup sites, and hydrogeological assessments.'],
     ['Pumping tests & borehole performance', 'Step-drawdown, 4-hour constant-rate and recovery tests (to 90% recovery), plus borehole performance assessment and pre-rehabilitation evaluation.'],
-    ['Solar-powered & gravity-fed systems', 'Post-pumping-test analysis, safe pump-installation depth, Total Dynamic Head calculation, pump curve selection, solar panel sizing and gravity-fed scheme design.'],
+    ['Surface water supply', 'Designing of surface water supply infustructure'],
     ['Water reticulation networks', 'Google Earth and EPANET models giving pipe diameters, lengths, base demand and operating pressures, followed by AutoCAD engineering drawings.'],
     ['Storage tanks, pump selection & hydraulics', 'Design of 7 m and 10 m water towers, tank sizing, tap stands, pump rooms and borehole manholes, with full hydraulic design.'],
     ['Irrigation water systems', 'Small-scale and solar-powered irrigation scheme design, with surveys, hydraulic layouts and drawings.'],
@@ -141,10 +141,7 @@ function offerings(s) {
       <div class="grid grid-cols-1 lg:grid-cols-[.7fr_1.3fr] gap-10 lg:gap-[80px]">
         <div class="lg:sticky lg:top-32 self-start">
           ${kicker('Scope of services', s.accent)}
-          ${h2('What we do, item by item.')}
-          <p class="mt-4 text-[13.5px] leading-[1.75] text-[#617484] max-w-[320px]">
-            Each line can be commissioned on its own or as part of a complete programme of works.
-          </p>
+          ${h2('That we we offer')}
         </div>
         <ol class="border-t border-[#cfdcd6]">
           ${s.offerings.map(([title, text], i) => `
