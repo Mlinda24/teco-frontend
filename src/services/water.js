@@ -3,7 +3,7 @@
 
 import {
   container, kicker, h2,
-  buildTeamRows, buildSharedTail,
+  buildSharedTail,
 } from './shared';
 
 const data = {
@@ -46,10 +46,41 @@ const data = {
   tools: ['EPANET', 'AutoCAD', 'Google Earth', 'ArcGIS / QGIS', 'mWater', 'TDH & pump-curve design', 'Geotron water detector', 'PRD drilling rig (partnership)', 'Borehole camera', 'Submersible pumps (3–11.7 m³/h)', '100 m dipper meter', 'Water quality meters', 'GPS', '6.5 kVA generator'],
   standards: 'Work is aligned with Malawi’s technical manual for water wells and groundwater monitoring systems, the standard operating procedures for aquifer pumping tests and for drilling and construction of production boreholes, and Malawi Bureau of Standards water quality requirements.',
 
-  // ⚠️ IMPORTANT: these team IDs must exactly match the keys
-  // used inside buildTeamRows (usually in shared.js). If shared.js
-  // has TEAM = { gomezgani: {...}, david: {...}, ... }, use lowercase.
-  team: ['gomezgani', 'david', 'lawrence', 'temwani'],
+  // Team data specific to this service
+  team: [
+    {
+      id: 'gm',
+      initials: 'GM',
+      name: 'Gomezgani Mwafulirwa',
+      role: 'Water Engineer – Hydraulic Design',
+      image: '/assets/gm.jpg',
+      qualifications: 'MSc. Water Resources Management & Development · Malawi Engineers Institution – Technician Engineer'
+    },
+    {
+      id: 'dm',
+      initials: 'DM',
+      name: 'David Mwandira',
+      role: 'Hydrologist & Surface Water Supply Engineer',
+      image: '/assets/dm.jpg',
+      qualifications: 'BSc. Irrigation Engineering · Malawi Engineers Institution – Irrigation Engineer'
+    },
+    {
+      id: 'lp',
+      initials: 'LP',
+      name: 'Lawrence Phiri',
+      role: 'Hydrogeologist',
+      image: '/assets/lp.jpg',
+      qualifications: 'BSc. Earth Sciences'
+    },
+    {
+      id: 'tc',
+      initials: 'TC',
+      name: 'Temwani Chisunkha',
+      role: 'Managing Director / Hydrogeologist & Water Resources Specialist',
+      image: '/assets/10.jpg',
+      qualifications: 'MSc. Hydrogeology & Environmental Engineering · Malawi Engineers Institution – Geotechnical Engineer'
+    }
+  ],
 
   // Each project must be [name, client, period] — all 3 slots filled.
   projects: [
@@ -67,10 +98,34 @@ const data = {
 function hero(s) {
   return `
   <section class="relative overflow-hidden text-white bg-[#0b2437]">
-    <img src="/assets/Picture4.jpg" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover object-center" />
-    <div class="absolute inset-0 bg-gradient-to-r from-[#0b2437]/80 via-[#0b2437]/30 to-transparent"></div>
+    <!-- Animated Background Images -->
+    <style>
+      @keyframes heroFade1 {
+        0%, 45% { opacity: 1; }
+        55%, 95% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @keyframes heroFade2 {
+        0%, 45% { opacity: 0; }
+        55%, 95% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+      .hero-bg-1 {
+        animation: heroFade1 10s infinite ease-in-out;
+      }
+      .hero-bg-2 {
+        animation: heroFade2 10s infinite ease-in-out;
+      }
+    </style>
+    
+    <img src="/assets/Picture4.jpg" alt="" aria-hidden="true" class="hero-bg-1 absolute inset-0 h-full w-full object-cover object-center" />
+    <img src="/assets/water1.jpg" alt="" aria-hidden="true" class="hero-bg-2 absolute inset-0 h-full w-full object-cover object-center" />
+
+    <!-- Overlays -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0b2437]/80 via-[#0b2437]/50 to-transparent"></div>
     <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0b2437]/70 to-transparent"></div>
-    <div class="relative">
+    
+    <div class="relative z-10">
       ${container(`
         <nav aria-label="Breadcrumb" class="pt-8 text-xs text-[#d5e5eb]">
           <a href="/" class="text-[#d5e5eb] no-underline hover:text-white">Home</a>
@@ -141,7 +196,7 @@ function offerings(s) {
       <div class="grid grid-cols-1 lg:grid-cols-[.7fr_1.3fr] gap-10 lg:gap-[80px]">
         <div class="lg:sticky lg:top-32 self-start">
           ${kicker('Scope of services', s.accent)}
-          ${h2('That we we offer')}
+          ${h2('What we offer')}
         </div>
         <ol class="border-t border-[#cfdcd6]">
           ${s.offerings.map(([title, text], i) => `
@@ -203,6 +258,43 @@ function tools(s) {
   </section>`;
 }
 
+// Custom team section with circular photos and qualifications
+function team(s) {
+  if (!Array.isArray(s.team) || !s.team.length) return '';
+  return `
+  <section class="bg-white py-[72px] lg:py-[100px]">
+    ${container(`
+      <div class="max-w-[720px] mb-12">
+        ${kicker('People behind the work', s.accent)}
+        ${h2('The team for this service.')}
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        ${s.team.map((member) => `
+          <div class="flex flex-col items-center text-center bg-[#f8fbfc] border border-[#dce4e7] rounded-[18px] p-6 shadow-[0_8px_24px_rgba(16,45,69,.03)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(16,45,69,.08)]">
+            
+            <!-- Circular picture with fallback initials -->
+            <div class="w-24 h-24 shrink-0 rounded-full overflow-hidden bg-gradient-to-br from-[#d7ece7] to-[#b8d1d8] flex items-center justify-center text-xl font-black text-[#14516b] mb-4 border-4 border-white shadow-sm">
+              <img src="${member.image}" alt="${member.name}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerText='${member.initials}';" />
+            </div>
+
+            <!-- Name and Role -->
+            <h3 class="text-[15px] font-extrabold text-[#173047] leading-[1.3] mb-1">${member.name}</h3>
+            <div class="text-[11px] font-bold uppercase tracking-[0.06em] text-[#176b9a] mb-3">${member.role}</div>
+
+            <!-- Qualifications (Only) -->
+            <p class="text-[12px] leading-[1.6] text-[#617484] mb-5 flex-grow">${member.qualifications}</p>
+
+            <!-- Profile Link -->
+            <a href="/team/${member.id}" class="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-[#dce4e7] bg-white text-[11px] font-extrabold text-[#173047] transition hover:border-[#176b9a] hover:text-[#176b9a] hover:shadow-sm mt-auto w-full">
+              View full profile
+            </a>
+          </div>
+        `).join('')}
+      </div>
+    `)}
+  </section>`;
+}
+
 function projects(s) {
   if (!Array.isArray(s.projects) || !s.projects.length) return '';
   return `
@@ -243,9 +335,7 @@ export function renderWaterPage() {
     safe(offerings, data),
     safe(process, data),
     safe(tools, data),
-    safe(() => (Array.isArray(data.team) && data.team.length
-      ? buildTeamRows(data.team, data.accent)
-      : ''), data),
+    safe(team, data),
     safe(projects, data),
     safe(buildSharedTail, data),
   ];
