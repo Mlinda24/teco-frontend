@@ -26,6 +26,9 @@ const HERO_IMAGES = [
   '/assets/picture5.jpg',
 ];
 
+// How long each hero image is displayed (ms)
+const HERO_INTERVAL_MS = 5000;
+
 const SERVICE_ROUTE = /^\/services\/([^/]+)$/;
 
 function routeFor(path) {
@@ -42,6 +45,8 @@ export default function App() {
   const [path, setPath] = useState(window.location.pathname);
   const [isNavigating, setIsNavigating] = useState(false);
   const [heroImage, setHeroImage] = useState(0);
+  // Increment this to force-restart the auto-advance timer after manual nav
+  const [heroTick, setHeroTick] = useState(0);
 
   const [markup, setMarkup] = useState({
     topline: '', header: '', footer: '', toast: '', sections: {},
@@ -80,17 +85,20 @@ export default function App() {
     HERO_IMAGES.forEach((src) => { const image = new Image(); image.src = src; });
   }, []);
 
+  // Auto-advance the hero every 5s. Re-runs whenever `heroTick` changes,
+  // so manual Next/Prev clicks reset the timer (no immediate double-jump).
   useEffect(() => {
     const timer = window.setInterval(() => {
       setHeroImage((c) => (c + 1) % HERO_IMAGES.length);
-    }, 4000);
+    }, HERO_INTERVAL_MS);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [heroTick]);
 
   useEffect(() => {
     setHeroImage(0);
   }, [path]);
 
+  // Apply the active image opacity
   useEffect(() => {
     const apply = () => {
       const images = document.querySelectorAll('#site-shell .hero-carousel-image');
@@ -115,6 +123,33 @@ export default function App() {
       cancelAnimationFrame(raf2);
     };
   }, [heroImage, pageContent]);
+
+  // Wire up Next / Prev buttons in the hero (they live inside dangerouslySetInnerHTML)
+  useEffect(() => {
+    const root = document.getElementById('site-shell');
+    if (!root) return undefined;
+
+    const nextBtn = root.querySelector('#heroNext');
+    const prevBtn = root.querySelector('#heroPrev');
+    if (!nextBtn && !prevBtn) return undefined;
+
+    const handleNext = () => {
+      setHeroImage((c) => (c + 1) % HERO_IMAGES.length);
+      setHeroTick((t) => t + 1);
+    };
+    const handlePrev = () => {
+      setHeroImage((c) => (c - 1 + HERO_IMAGES.length) % HERO_IMAGES.length);
+      setHeroTick((t) => t + 1);
+    };
+
+    nextBtn?.addEventListener('click', handleNext);
+    prevBtn?.addEventListener('click', handlePrev);
+
+    return () => {
+      nextBtn?.removeEventListener('click', handleNext);
+      prevBtn?.removeEventListener('click', handlePrev);
+    };
+  }, [pageContent]);
 
   useEffect(() => {
     const pop = () => { setIsNavigating(true); setPath(window.location.pathname); };
