@@ -1,26 +1,67 @@
-1consultancy
-2practical expertise close to logo
-3hero "water supply"
-4hero environmental and consultancy solutions
-5next on pics
-6camera pic on anime
+# Dependencies (⚠️ THIS IS THE ONE THAT FIXES YOUR NETLIFY BUILD)
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
 
-7who we are edited
-8als check the profie on services overed
-9"who we are" should be well placed or redesigned
+# Build output
+dist/
+dist-ssr/
+build/
+out/
+.vite/
+.next/
+.nuxt/
 
-10add content from profile to our services
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
 
-11add lilongwe to get in touch
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-12design of water towers(no meters), on water page
-13changes on solar powered
-14(scope should be changed)
-15water quality sampling and testing on number 4(consultancy page)
-16Hydrological & hydrogeological studies on number 1
-add surfacewater supply on subdepts in water
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.turbo/
 
-Borehole drilling & development
-Electrical resistivity surveys (VES and HEP) to locate aquifers, drilling supervision, cutting samples every 1 m, casing and screen design, and borehole development by airlifting or surging.
+# Test / coverage
+coverage/
+.nyc_output/
 
+# Editor / IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
+# OS junk
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Misc
+*.pem
+*.tsbuildinfo
