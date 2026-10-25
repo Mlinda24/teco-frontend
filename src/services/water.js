@@ -96,34 +96,50 @@ const data = {
 // ---------- Section builders ----------
 
 function hero(s) {
+  // Using a unique class prefix "teco-water" to avoid React stripping/clashing
+  // and to guarantee the keyframes are namespaced. The animation fades between
+  // the two images every 5s (10s total loop, 50/50 split with a fade in between).
   return `
+  <style>
+    @keyframes tecoWaterFadeA {
+      0%, 45%   { opacity: 1; }
+      55%, 95%  { opacity: 0; }
+      100%      { opacity: 1; }
+    }
+    @keyframes tecoWaterFadeB {
+      0%, 45%   { opacity: 0; }
+      55%, 95%  { opacity: 1; }
+      100%      { opacity: 0; }
+    }
+    .teco-water-bg-a {
+      animation: tecoWaterFadeA 10s infinite ease-in-out;
+      opacity: 1;
+    }
+    .teco-water-bg-b {
+      animation: tecoWaterFadeB 10s infinite ease-in-out;
+      opacity: 0;
+    }
+  </style>
+
   <section class="relative overflow-hidden text-white bg-[#0b2437]">
-    <!-- Animated Background Images -->
-    <style>
-      @keyframes heroFade1 {
-        0%, 45% { opacity: 1; }
-        55%, 95% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-      @keyframes heroFade2 {
-        0%, 45% { opacity: 0; }
-        55%, 95% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-      .hero-bg-1 {
-        animation: heroFade1 10s infinite ease-in-out;
-      }
-      .hero-bg-2 {
-        animation: heroFade2 10s infinite ease-in-out;
-      }
-    </style>
     
-    <img src="/assets/Picture4.jpg" alt="" aria-hidden="true" class="hero-bg-1 absolute inset-0 h-full w-full object-cover object-center" />
-    <img src="/assets/water1.jpg" alt="" aria-hidden="true" class="hero-bg-2 absolute inset-0 h-full w-full object-cover object-center" />
+    <!-- Two stacked images that crossfade every 5s -->
+    <img 
+      src="/assets/Picture4.jpg" 
+      alt="" 
+      aria-hidden="true"
+      class="teco-water-bg-a absolute inset-0 h-full w-full object-cover object-center" 
+    />
+    <img 
+      src="/assets/water1.jpg" 
+      alt="" 
+      aria-hidden="true"
+      class="teco-water-bg-b absolute inset-0 h-full w-full object-cover object-center" 
+    />
 
     <!-- Overlays -->
-    <div class="absolute inset-0 bg-gradient-to-r from-[#0b2437]/80 via-[#0b2437]/50 to-transparent"></div>
-    <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0b2437]/70 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0b2437]/80 via-[#0b2437]/50 to-transparent pointer-events-none"></div>
+    <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0b2437]/70 to-transparent pointer-events-none"></div>
     
     <div class="relative z-10">
       ${container(`
