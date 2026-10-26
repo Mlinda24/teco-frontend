@@ -4,20 +4,14 @@
 <header class="header bg-white/95 backdrop-blur-[14px] border-b border-[#dce4e7] shadow-[0_4px_20px_rgba(16,45,69,.06)]">
   <div class="container nav mx-auto w-full max-w-[1160px] px-[22px] h-[80px] md:h-[92px] flex items-center justify-between gap-4">
     <a aria-label="TECO home" class="brand flex items-center gap-3 no-underline shrink-0" href="/">
-      
-      <!-- Original large logo retained -->
       <div class="brandmark w-[140px] h-[140px] md:w-[150px] md:h-[150px] shrink-0 grid place-items-center bg-transparent shadow-none -my-4 md:my-0">
         <img alt="Official TECO Farms &amp; Engineering logo" src="/assets/Normal_logo.svg" class="w-full h-full object-contain scale-[1.25] md:scale-[1.4] origin-center"/>
       </div>
-      
-      <!-- Responsive text: small on mobile, normal on desktop -->
       <div class="brandname text-[10px] md:text-[14px] lg:text-[16px] font-extrabold tracking-[0.02em] leading-[1.2] text-[#173047] max-w-[130px] sm:max-w-[180px] md:max-w-none ml-1 md:ml-[30px]">
         PRACTICAL EXPERTISE.<br class="md:hidden"> SUSTAINABLE IMPACT.
       </div>
     </a>
-    
     <button aria-label="Open navigation" class="menu-toggle rounded-lg border border-[#dce4e7] bg-transparent px-3 py-2 text-[#173047] cursor-pointer md:hidden shrink-0" id="menuToggle">☰</button>
-    
     <nav class="navlinks flex items-center gap-6 text-[13px] font-bold text-[#617484] absolute left-0 right-0 top-full hidden flex-col bg-white border-b border-[#dce4e7] p-5 shadow-lg md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0 md:shadow-none" id="navLinks">
       <a href="/" class="inline-flex items-center gap-1.5 w-full py-3 px-2 rounded-lg text-[15px] hover:bg-[#eff6ee] hover:text-[#176b9a] transition md:w-auto md:py-0 md:px-0 md:rounded-none md:text-[13px] md:hover:bg-transparent md:hover:text-[#617484]">
         <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
@@ -146,15 +140,18 @@
     <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[#f2a900]/5 blur-3xl"></div>
   </div>
 
-  <div class="container about-grid mx-auto w-full max-w-[1160px] px-[22px] grid grid-cols-1 lg:grid-cols-[.95fr_1.05fr] gap-8 lg:gap-[60px] items-center relative z-10">
-    <div class="about-visual relative min-h-[330px] lg:min-h-[480px] overflow-hidden rounded-[24px] bg-white shadow-[0_20px_50px_rgba(16,45,69,.08)] border border-white">
+  <div class="container about-grid mx-auto w-full max-w-[1160px] px-[22px] grid grid-cols-1 lg:grid-cols-[.95fr_1.05fr] gap-8 lg:gap-[60px] items-stretch relative z-10">
+    
+    <!-- SINGLE IMAGE -->
+    <div class="relative aspect-[4/5] w-full overflow-hidden rounded-[20px] bg-white shadow-[0_20px_50px_rgba(16,45,69,.08)] border border-white">
       <img src="/assets/7.jpg" alt="TECO Farms engineering project" class="absolute inset-0 z-0 h-full w-full object-cover"/>
     </div>
 
-    <div class="about-copy bg-white/70 backdrop-blur-sm p-8 lg:p-10 rounded-[24px] border border-white shadow-[0_10px_40px_rgba(16,45,69,.04)]">
+    <!-- INFO CARD: stretches to match the image height -->
+    <div class="about-copy bg-white/70 backdrop-blur-sm p-8 lg:p-10 rounded-[24px] border border-white shadow-[0_10px_40px_rgba(16,45,69,.04)] h-full flex flex-col justify-center">
       <div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-3">Who we are</div>
       <h2 class="text-[clamp(24px,3vw,32px)] font-extrabold leading-[1.15] tracking-[-0.02em] text-[#173047] mb-6">
-        TECO Farms & Engineering Ltd
+        TECO Farms & Engineering Limited
       </h2>
 
       <div class="space-y-4 text-[14.5px] leading-[1.8] text-[#4a5e6d] mb-8">
@@ -170,35 +167,35 @@
       <ul class="check-list list-none p-0 my-6 grid grid-cols-1 sm:grid-cols-2 gap-[8px]">
         <li class="flex items-center gap-2 rounded-lg border border-[#dce4e7] bg-white px-3 py-2 text-[12.5px] font-semibold text-[#173047] shadow-[0_2px_4px_rgba(16,45,69,.02)] transition hover:border-[#176b9a]/30 hover:shadow-[0_4px_8px_rgba(16,45,69,.06)]">
           <svg class="w-3.5 h-3.5 text-[#176b9a] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          Food and Agro-Processing
+          1. Water supply systems and irrigation
         </li>
         <li class="flex items-center gap-2 rounded-lg border border-[#dce4e7] bg-white px-3 py-2 text-[12.5px] font-semibold text-[#173047] shadow-[0_2px_4px_rgba(16,45,69,.02)] transition hover:border-[#176b9a]/30 hover:shadow-[0_4px_8px_rgba(16,45,69,.06)]">
           <svg class="w-3.5 h-3.5 text-[#176b9a] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          Environmental, Climate, Waste Mgt
+          2. Construction (Civil & Building)
         </li>
         <li class="flex items-center gap-2 rounded-lg border border-[#dce4e7] bg-white px-3 py-2 text-[12.5px] font-semibold text-[#173047] shadow-[0_2px_4px_rgba(16,45,69,.02)] transition hover:border-[#176b9a]/30 hover:shadow-[0_4px_8px_rgba(16,45,69,.06)]">
           <svg class="w-3.5 h-3.5 text-[#176b9a] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          Construction (Civil & Building)
+          3. Borehole drilling
         </li>
         <li class="flex items-center gap-2 rounded-lg border border-[#dce4e7] bg-white px-3 py-2 text-[12.5px] font-semibold text-[#173047] shadow-[0_2px_4px_rgba(16,45,69,.02)] transition hover:border-[#176b9a]/30 hover:shadow-[0_4px_8px_rgba(16,45,69,.06)]">
           <svg class="w-3.5 h-3.5 text-[#176b9a] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          Engineering Drawings & Designs
+          4. Engineering Drawings & Designs
         </li>
         <li class="flex items-center gap-2 rounded-lg border border-[#dce4e7] bg-white px-3 py-2 text-[12.5px] font-semibold text-[#173047] shadow-[0_2px_4px_rgba(16,45,69,.02)] transition hover:border-[#176b9a]/30 hover:shadow-[0_4px_8px_rgba(16,45,69,.06)]">
           <svg class="w-3.5 h-3.5 text-[#176b9a] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          Water supply systems & Irrigation
+          5. Hydrological modelling & research
         </li>
         <li class="flex items-center gap-2 rounded-lg border border-[#dce4e7] bg-white px-3 py-2 text-[12.5px] font-semibold text-[#173047] shadow-[0_2px_4px_rgba(16,45,69,.02)] transition hover:border-[#176b9a]/30 hover:shadow-[0_4px_8px_rgba(16,45,69,.06)]">
           <svg class="w-3.5 h-3.5 text-[#176b9a] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          Borehole drilling & Water Quality
+          6. Environment 
         </li>
         <li class="flex items-center gap-2 rounded-lg border border-[#dce4e7] bg-white px-3 py-2 text-[12.5px] font-semibold text-[#173047] shadow-[0_2px_4px_rgba(16,45,69,.02)] transition hover:border-[#176b9a]/30 hover:shadow-[0_4px_8px_rgba(16,45,69,.06)]">
           <svg class="w-3.5 h-3.5 text-[#176b9a] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          Hydrological modelling & research
+          7. Food and agro-processing
         </li>
         <li class="flex items-center gap-2 rounded-lg border border-[#dce4e7] bg-white px-3 py-2 text-[12.5px] font-semibold text-[#173047] shadow-[0_2px_4px_rgba(16,45,69,.02)] transition hover:border-[#176b9a]/30 hover:shadow-[0_4px_8px_rgba(16,45,69,.06)]">
           <svg class="w-3.5 h-3.5 text-[#176b9a] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          Solar and Electrical Services
+          8. Solar
         </li>
       </ul>
 
@@ -212,7 +209,7 @@
   </div>
 </section>
 
-<section class="services bg-[#eff6ee] py-[62px] lg:py-[86px]" id="services">
+<section class="services bg-[#eff6ee] lg:pb-[86px]" id="services">
   <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
 
     <div class="section-head center max-w-[680px] mb-[38px] text-center mx-auto">
@@ -226,7 +223,7 @@
       <!-- 1. Water Supply Systems -->
       <article class="service-card min-h-[220px] rounded-[15px] border border-[#dce4e7] bg-white p-[26px] pb-6 shadow-[0_8px_25px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1.5 hover:border-[#6eb7b0] hover:shadow-[0_18px_40px_rgba(20,54,75,.10)]">
         <div class="service-image mb-5 overflow-hidden rounded-[13px]">
-          <img src="/assets/17.jpg" alt="TECO Farms water infrastructure project" class="h-40 w-full object-cover"/>
+          <img src="/assets/water1.jpg" alt="TECO Farms water infrastructure project" class="h-40 w-full object-cover"/>
         </div>
         <div class="service-icon w-12 h-12 rounded-[13px] bg-[#e1f2ef] grid place-items-center text-[#176b9a] mb-[19px]" aria-hidden="true">
           <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -279,21 +276,231 @@
     </div>
   </div>
 </section>
-<section id="projects"><div class="container mx-auto w-full max-w-[1160px] px-[22px]"><div class="section-head max-w-[680px] mb-[38px]"><div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">Selected experience</div><h2>Practical work. Measurable community value.</h2><p>Showcase completed and ongoing assignments here with real site photographs, project locations, client names (where permission is granted), and concise descriptions of TECO&rsquo;s role.</p></div><div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.15fr_.85fr_.85fr] gap-[17px]">
-<article class="project overflow-hidden rounded-[15px] border border-[#dce4e7] bg-white shadow-[0_8px_25px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(20,54,75,.09)]"><div class="project-art water relative h-[210px] overflow-hidden bg-gradient-to-br from-[#dcece8] to-[#7eb6b8] bg-gradient-to-br from-[#dcece8] to-[#7eb6b8]"><span class="label absolute left-[15px] top-[15px] rounded-[5px] bg-white/95 px-2 py-1.5 text-[9px] font-black uppercase tracking-[0.1em] text-[#163e50]">Water infrastructure</span></div><div class="project-body p-5"><small>Water supply systems</small><h3>Community Water Reticulation</h3><p>Design, supervision and construction support for water reticulation systems serving community needs. Add verified project name, district, client and scope here.</p></div></article>
-<article class="project overflow-hidden rounded-[15px] border border-[#dce4e7] bg-white shadow-[0_8px_25px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(20,54,75,.09)]"><div class="project-art tank relative h-[210px] overflow-hidden bg-gradient-to-br from-[#dcece8] to-[#7eb6b8] bg-gradient-to-br from-[#e3e8df] to-[#a9c4c1]"><span class="label absolute left-[15px] top-[15px] rounded-[5px] bg-white/95 px-2 py-1.5 text-[9px] font-black uppercase tracking-[0.1em] text-[#163e50]">Storage &amp; distribution</span></div><div class="project-body p-5"><small>System design</small><h3>Water Storage &amp; Network Design</h3><p>Tank and network planning, site survey, hydraulic design, construction drawings and implementation support.</p></div></article>
-<article class="project overflow-hidden rounded-[15px] border border-[#dce4e7] bg-white shadow-[0_8px_25px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(20,54,75,.09)]"><div class="project-art field relative h-[210px] overflow-hidden bg-gradient-to-br from-[#dcece8] to-[#7eb6b8] bg-gradient-to-br from-[#dcebdc] to-[#d4b57e]"><span class="label absolute left-[15px] top-[15px] rounded-[5px] bg-white/95 px-2 py-1.5 text-[9px] font-black uppercase tracking-[0.1em] text-[#163e50]">Agriculture</span></div><div class="project-body p-5"><small>Irrigation &amp; livelihoods</small><h3>Irrigation and Water Use</h3><p>Engineering support for irrigation, agricultural water management and resilient local production.</p></div></article>
-</div><div class="project-note mt-5 text-[11px] leading-[1.7] text-[#617484]"></div></div></section>
-<section class="services bg-[#eff6ee] py-[62px] lg:py-[86px]" id="current-works"><div class="container mx-auto w-full max-w-[1160px] px-[22px]"><div class="section-head max-w-[680px] mb-[38px]"><div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">On the ground</div><h2>Current works &amp; active assignments.</h2><p>A dedicated space to show visitors what TECO is working on now, where work is taking place and the stage each assignment has reached.</p></div><div class="current-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[17px]"><article class="current-card relative min-h-[190px] overflow-hidden rounded-[15px] border border-[#dce4e7] bg-white p-[23px] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[5px] before:bg-[#8fbd9b]"><span class="status inline-flex items-center gap-2 rounded-full bg-[#edf6e9] px-2.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.04em] text-[#426b45]">In progress</span><h3>Water Supply System Works</h3><p>Publish the approved project name, district, client (where permitted), current stage and latest site photographs.</p></article><article class="current-card relative min-h-[190px] overflow-hidden rounded-[15px] border border-[#dce4e7] bg-white p-[23px] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[5px] before:bg-[#8fbd9b]"><span class="status inline-flex items-center gap-2 rounded-full bg-[#edf6e9] px-2.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.04em] text-[#426b45]">Design stage</span><h3>Engineering Design &amp; Assessment</h3><p>Summarise active surveys, hydraulic designs, assessments or technical drawings without disclosing confidential information.</p></article><article class="current-card relative min-h-[190px] overflow-hidden rounded-[15px] border border-[#dce4e7] bg-white p-[23px] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[5px] before:bg-[#8fbd9b]"><span class="status inline-flex items-center gap-2 rounded-full bg-[#edf6e9] px-2.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.04em] text-[#426b45]">Field activities</span><h3>Groundwater, Irrigation &amp; WASH</h3><p>Feature current field assignments, progress milestones and practical outcomes as approved by the client.</p></article></div><div class="section-note mt-5 rounded-[10px] bg-[#eff6ee] px-4 py-3.5 text-[11px] leading-[1.7] text-[#617484]"></div></section>
-<section id="clients"><div class="container mx-auto w-full max-w-[1160px] px-[22px]"><div class="section-head center max-w-[680px] mb-[38px] text-center mx-auto"><div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">Trusted relationships</div><h2>Our clients &amp; sectors we serve.</h2><p>Showcase organisations that have commissioned or worked with TECO, alongside the sectors we support. Only display client names and logos when accurate and authorised.</p></div><div class="client-grid grid grid-cols-2 lg:grid-cols-4 gap-[17px]"><article class="client-card min-h-[135px] rounded-[15px] border border-[#dce4e7] bg-[#eff6ee] p-[23px] text-center flex flex-col items-center justify-center shadow-[0_8px_22px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_34px_rgba(20,54,75,.08)]"><div class="client-mark w-[46px] h-[46px] mb-2 rounded-[13px] bg-gradient-to-br from-[#eaf5e8] to-[#fce8b5] grid place-items-center text-[13px] font-black text-[#102d45]">NGO</div><h3>Development Partners</h3><small>Approved client logos or project references</small></article><article class="client-card min-h-[135px] rounded-[15px] border border-[#dce4e7] bg-[#eff6ee] p-[23px] text-center flex flex-col items-center justify-center shadow-[0_8px_22px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_34px_rgba(20,54,75,.08)]"><div class="client-mark w-[46px] h-[46px] mb-2 rounded-[13px] bg-gradient-to-br from-[#eaf5e8] to-[#fce8b5] grid place-items-center text-[13px] font-black text-[#102d45]">GOV</div><h3>Government &amp; Councils</h3><small>Public-sector assignments, where approved</small></article><article class="client-card min-h-[135px] rounded-[15px] border border-[#dce4e7] bg-[#eff6ee] p-[23px] text-center flex flex-col items-center justify-center shadow-[0_8px_22px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_34px_rgba(20,54,75,.08)]"><div class="client-mark w-[46px] h-[46px] mb-2 rounded-[13px] bg-gradient-to-br from-[#eaf5e8] to-[#fce8b5] grid place-items-center text-[13px] font-black text-[#102d45]">WASH</div><h3>WASH Organisations</h3><small>Water, sanitation and community programmes</small></article><article class="client-card min-h-[135px] rounded-[15px] border border-[#dce4e7] bg-[#eff6ee] p-[23px] text-center flex flex-col items-center justify-center shadow-[0_8px_22px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_34px_rgba(20,54,75,.08)]"><div class="client-mark w-[46px] h-[46px] mb-2 rounded-[13px] bg-gradient-to-br from-[#eaf5e8] to-[#fce8b5] grid place-items-center text-[13px] font-black text-[#102d45]">PRI</div><h3>Private Sector</h3><small>Businesses, institutions and other clients</small></article></div></div></section>
-<section class="services bg-[#eff6ee] py-[62px] lg:py-[86px]" id="partners"><div class="container mx-auto w-full max-w-[1160px] px-[22px]"><div class="section-head max-w-[680px] mb-[38px]"><div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">Working together</div><h2>Partners &amp; collaboration.</h2><p>Highlight delivery partners, technical collaborators, suppliers and institutions that help TECO deliver quality work.</p></div><div class="partner-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[17px]"><article class="partner-card flex items-start gap-[15px] min-h-[190px] rounded-[15px] border border-[#dce4e7] bg-white p-[23px]"><div class="partner-mark w-[46px] h-[46px] shrink-0 rounded-[13px] bg-[#eaf4e8] grid place-items-center text-[13px] font-black text-[#2e684e]">01</div><div><h3>Technical &amp; Engineering Partners</h3><p>Collaborators supporting design, surveys, specialist engineering and implementation. Add verified partner details and logos with permission.</p></div></article><article class="partner-card flex items-start gap-[15px] min-h-[190px] rounded-[15px] border border-[#dce4e7] bg-white p-[23px]"><div class="partner-mark w-[46px] h-[46px] shrink-0 rounded-[13px] bg-[#eaf4e8] grid place-items-center text-[13px] font-black text-[#2e684e]">02</div><div><h3>Development &amp; Community Partners</h3><p>Organisations and local stakeholders working with TECO on water, WASH, agriculture and infrastructure initiatives.</p></div></article><article class="partner-card flex items-start gap-[15px] min-h-[190px] rounded-[15px] border border-[#dce4e7] bg-white p-[23px]"><div class="partner-mark w-[46px] h-[46px] shrink-0 rounded-[13px] bg-[#eaf4e8] grid place-items-center text-[13px] font-black text-[#2e684e]">03</div><div><h3>Suppliers &amp; Service Providers</h3><p>Approved suppliers and service providers supporting equipment, materials and project delivery.</p></div></article></div><div class="section-note mt-5 rounded-[10px] bg-[#eff6ee] px-4 py-3.5 text-[11px] leading-[1.7] text-[#617484]"></div></section>
-<section class="approach bg-[#102d45] text-white py-[62px] lg:py-[86px]"><div class="container mx-auto w-full max-w-[1160px] px-[22px]"><div class="section-head max-w-[680px] mb-[38px]"><div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px] text-[#e8aa76]">How we work</div><h2>A clear process from first conversation to handover.</h2><p class="text-[#c4d6de]">Every project is different. Our approach starts with understanding the brief and ends with practical documentation and a focus on sustainable operation.</p></div><div class="steps grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"><div class="step border-t border-white/20 pt-[21px]"><div class="step-no text-[11px] font-black uppercase tracking-[0.14em] text-[#81d0c8]">STEP 01 / DISCOVER</div><h3>Understand the need</h3><p>Discuss project objectives, site context, community requirements, budget and expected outputs.</p></div><div class="step border-t border-white/20 pt-[21px]"><div class="step-no text-[11px] font-black uppercase tracking-[0.14em] text-[#81d0c8]">STEP 02 / ASSESS</div><h3>Survey &amp; investigate</h3><p>Review available information and undertake the required site assessment, measurements and technical investigations.</p></div><div class="step border-t border-white/20 pt-[21px]"><div class="step-no text-[11px] font-black uppercase tracking-[0.14em] text-[#81d0c8]">STEP 03 / DESIGN</div><h3>Plan the solution</h3><p>Develop practical designs, drawings, specifications, schedules and cost information appropriate to the brief.</p></div><div class="step border-t border-white/20 pt-[21px]"><div class="step-no text-[11px] font-black uppercase tracking-[0.14em] text-[#81d0c8]">STEP 04 / DELIVER</div><h3>Support &amp; hand over</h3><p>Coordinate implementation, supervise quality where commissioned, and provide handover documentation.</p></div></div></div></section>
-<section id="team"><div class="container mx-auto w-full max-w-[1160px] px-[22px]"><div class="section-head max-w-[680px] mb-[38px]"><div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">People behind the work</div><h2>A multidisciplinary team.</h2><p>Introduce the engineers, technical specialists and management staff who lead assignments and support delivery.</p></div><div class="team-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[17px]">
-<article class="person flex items-start gap-[15px] rounded-[14px] border border-[#dce4e7] bg-white p-[22px] shadow-[0_8px_25px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(20,54,75,.08)]"><div class="avatar w-14 h-14 shrink-0 rounded-[14px] bg-gradient-to-br from-[#d7ece7] to-[#b8d1d8] grid place-items-center text-[17px] font-black text-[#14516b]">TC</div><div><h3>Temwani Chisunkha</h3><small>Company Leadership</small><p>Company direction, client coordination and project management. Add the approved professional biography and qualifications.</p></div></article>
-<article class="person flex items-start gap-[15px] rounded-[14px] border border-[#dce4e7] bg-white p-[22px] shadow-[0_8px_25px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(20,54,75,.08)]"><div class="avatar w-14 h-14 shrink-0 rounded-[14px] bg-gradient-to-br from-[#d7ece7] to-[#b8d1d8] grid place-items-center text-[17px] font-black text-[#14516b]">GM</div><div><h3>Gomezgani Mwafulirwa</h3><small>Water Engineering</small><p>Water resources and water supply systems expertise. Add verified qualifications, professional memberships and project experience.</p></div></article>
-<article class="person flex items-start gap-[15px] rounded-[14px] border border-[#dce4e7] bg-white p-[22px] shadow-[0_8px_25px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(20,54,75,.08)]"><div class="avatar w-14 h-14 shrink-0 rounded-[14px] bg-gradient-to-br from-[#d7ece7] to-[#b8d1d8] grid place-items-center text-[17px] font-black text-[#14516b]">DM</div><div><h3>David Mwandira</h3><small>Irrigation Engineering</small><p>Irrigation engineering and technical project experience. Add approved CV highlights and relevant assignments.</p></div></article>
-</div><div class="team-note mt-[18px] text-[11px] text-[#617484]"></div></div></section>
-<div class="cta-band pb-[60px] lg:pb-[82px]"><div class="container mx-auto w-full max-w-[1160px] px-[22px]"><div class="cta-box flex flex-col lg:flex-row items-start lg:items-center justify-between gap-[30px] rounded-[20px] bg-gradient-to-br from-[#e4f2ef] to-[#e8edf0] p-7 lg:px-[42px] lg:py-[38px] text-[#153a50]"><div><h2>Have a project in mind?</h2><p>Tell us what you are planning. We can discuss your requirements and identify the right technical support for your project.</p></div><a class="btn inline-flex items-center justify-center gap-2 px-[19px] py-[13px] rounded-lg bg-[#f2a900] text-white text-[13px] font-extrabold border border-transparent cursor-pointer transition duration-200 hover:-translate-y-0.5 hover:brightness-105 no-underline" href="#contact">Start a conversation &nearrow;</a></div></div></div>
+
+<!-- PROJECTS SECTION -->
+<section id="projects">
+  <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
+    <div class="section-head max-w-[680px] mb-[38px]">
+      <div class="kicker text-[20px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px] mt-[30px]">Selected experience</div>
+      <h2 class="font-bold text-[30px]">Practical work. Measurable community value.</h2>
+    </div>
+    
+    <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.15fr_.85fr_.85fr] gap-[17px]">
+      <!-- Project 1 -->
+      <article class="project overflow-hidden bg-transparent transition duration-300">
+        <div class="project-art water relative h-[210px] overflow-hidden bg-transparent">
+          <img src="/assets/water2.jpg" alt="Community Water Reticulation" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+        <div class="project-body p-5">
+          <small>Water supply systems</small>
+          <h3>Community Water Reticulation</h3>
+          <p>Design, supervision and construction support for water reticulation systems serving community needs. Add verified project name, district, client and scope here.</p>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project overflow-hidden bg-transparent transition duration-300">
+        <div class="project-art tank relative h-[210px] overflow-hidden bg-transparent">
+          <img src="/assets/water systems.jpg" alt="Water Storage & Network Design" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+        <div class="project-body p-5">
+          <small>System design</small>
+          <h3>Water Storage &amp; Network Design</h3>
+          <p>Tank and network planning, site survey, hydraulic design, construction drawings and implementation support.</p>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project overflow-hidden bg-transparent transition duration-300">
+        <div class="project-art field relative h-[210px] overflow-hidden bg-transparent">
+          <img src="/assets/ittigation.jpg" alt="Irrigation and Water Use" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+        <div class="project-body p-5">
+          <small>Irrigation &amp; livelihoods</small>
+          <h3>Irrigation and Water Use</h3>
+          <p>Engineering support for irrigation, agricultural water management and resilient local production.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CURRENT WORKS SECTION -->
+<section class="services bg-[#eff6ee] py-[62px] lg:py-[86px]" id="current-works">
+  <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
+    <div class="section-head max-w-[680px] mb-[38px]">
+      <div class="kicker text-[20px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">On the ground</div>
+      <h2>Current works &amp; active assignments.</h2>
+    </div>
+    <div class="current-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[17px]">
+      <article class="current-card relative min-h-[190px] overflow-hidden rounded-[15px] border border-[#dce4e7] bg-white p-[23px] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[5px] before:bg-[#8fbd9b]">
+        <span class="status inline-flex items-center gap-2 rounded-full bg-[#edf6e9] px-2.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.04em] text-[#426b45]">In progress</span>
+        <h3>Water Supply System Works</h3>
+        <p>Publish the approved project name, district, client (where permitted), current stage and latest site photographs.</p>
+      </article>
+      <article class="current-card relative min-h-[190px] overflow-hidden rounded-[15px] border border-[#dce4e7] bg-white p-[23px] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[5px] before:bg-[#8fbd9b]">
+        <span class="status inline-flex items-center gap-2 rounded-full bg-[#edf6e9] px-2.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.04em] text-[#426b45]">Design stage</span>
+        <h3>Engineering Design &amp; Assessment</h3>
+        <p>Summarise active surveys, hydraulic designs, assessments or technical drawings without disclosing confidential information.</p>
+      </article>
+      <article class="current-card relative min-h-[190px] overflow-hidden rounded-[15px] border border-[#dce4e7] bg-white p-[23px] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[5px] before:bg-[#8fbd9b]">
+        <span class="status inline-flex items-center gap-2 rounded-full bg-[#edf6e9] px-2.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.04em] text-[#426b45]">Field activities</span>
+        <h3>Groundwater, Irrigation &amp; WASH</h3>
+        <p>Feature current field assignments, progress milestones and practical outcomes as approved by the client.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS SECTION -->
+<section id="clients">
+  <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
+    <div class="section-head center max-w-[680px] mb-[38px] text-center mx-auto">
+      <div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">Trusted relationships</div>
+      <h2>Our clients &amp; sectors we serve.</h2>
+      <p>Showcase organisations that have commissioned or worked with TECO, alongside the sectors we support. Only display client names and logos when accurate and authorised.</p>
+    </div>
+    <div class="client-grid grid grid-cols-2 lg:grid-cols-4 gap-[17px]">
+      <article class="client-card min-h-[135px] rounded-[15px] border border-[#dce4e7] bg-[#eff6ee] p-[23px] text-center flex flex-col items-center justify-center shadow-[0_8px_22px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_34px_rgba(20,54,75,.08)]">
+        <div class="client-mark w-[46px] h-[46px] mb-2 rounded-[13px] bg-gradient-to-br from-[#eaf5e8] to-[#fce8b5] grid place-items-center text-[13px] font-black text-[#102d45]">NGO</div>
+        <h3>Development Partners</h3><small>Approved client logos or project references</small>
+      </article>
+      <article class="client-card min-h-[135px] rounded-[15px] border border-[#dce4e7] bg-[#eff6ee] p-[23px] text-center flex flex-col items-center justify-center shadow-[0_8px_22px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_34px_rgba(20,54,75,.08)]">
+        <div class="client-mark w-[46px] h-[46px] mb-2 rounded-[13px] bg-gradient-to-br from-[#eaf5e8] to-[#fce8b5] grid place-items-center text-[13px] font-black text-[#102d45]">GOV</div>
+        <h3>Government &amp; Councils</h3><small>Public-sector assignments, where approved</small>
+      </article>
+      <article class="client-card min-h-[135px] rounded-[15px] border border-[#dce4e7] bg-[#eff6ee] p-[23px] text-center flex flex-col items-center justify-center shadow-[0_8px_22px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_34px_rgba(20,54,75,.08)]">
+        <div class="client-mark w-[46px] h-[46px] mb-2 rounded-[13px] bg-gradient-to-br from-[#eaf5e8] to-[#fce8b5] grid place-items-center text-[13px] font-black text-[#102d45]">WASH</div>
+        <h3>WASH Organisations</h3><small>Water, sanitation and community programmes</small>
+      </article>
+      <article class="client-card min-h-[135px] rounded-[15px] border border-[#dce4e7] bg-[#eff6ee] p-[23px] text-center flex flex-col items-center justify-center shadow-[0_8px_22px_rgba(20,54,75,.035)] transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_34px_rgba(20,54,75,.08)]">
+        <div class="client-mark w-[46px] h-[46px] mb-2 rounded-[13px] bg-gradient-to-br from-[#eaf5e8] to-[#fce8b5] grid place-items-center text-[13px] font-black text-[#102d45]">PRI</div>
+        <h3>Private Sector</h3><small>Businesses, institutions and other clients</small>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS SECTION -->
+<section class="services bg-[#eff6ee] py-[62px] lg:py-[86px]" id="partners">
+  <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
+    <div class="section-head max-w-[680px] mb-[38px]">
+      <div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">Working together</div>
+      <h2>Partners &amp; collaboration.</h2>
+      <p>Highlight delivery partners, technical collaborators, suppliers and institutions that help TECO deliver quality work.</p>
+    </div>
+    <div class="partner-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[17px]">
+      <article class="partner-card flex items-start gap-[15px] min-h-[190px] rounded-[15px] border border-[#dce4e7] bg-white p-[23px]">
+        <div class="partner-mark w-[46px] h-[46px] shrink-0 rounded-[13px] bg-[#eaf4e8] grid place-items-center text-[13px] font-black text-[#2e684e]">01</div>
+        <div>
+          <h3>Technical &amp; Engineering Partners</h3>
+          <p>Collaborators supporting design, surveys, specialist engineering and implementation. Add verified partner details and logos with permission.</p>
+        </div>
+      </article>
+      <article class="partner-card flex items-start gap-[15px] min-h-[190px] rounded-[15px] border border-[#dce4e7] bg-white p-[23px]">
+        <div class="partner-mark w-[46px] h-[46px] shrink-0 rounded-[13px] bg-[#eaf4e8] grid place-items-center text-[13px] font-black text-[#2e684e]">02</div>
+        <div>
+          <h3>Development &amp; Community Partners</h3>
+          <p>Organisations and local stakeholders working with TECO on water, WASH, agriculture and infrastructure initiatives.</p>
+        </div>
+      </article>
+      <article class="partner-card flex items-start gap-[15px] min-h-[190px] rounded-[15px] border border-[#dce4e7] bg-white p-[23px]">
+        <div class="partner-mark w-[46px] h-[46px] shrink-0 rounded-[13px] bg-[#eaf4e8] grid place-items-center text-[13px] font-black text-[#2e684e]">03</div>
+        <div>
+          <h3>Suppliers &amp; Service Providers</h3>
+          <p>Approved suppliers and service providers supporting equipment, materials and project delivery.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH SECTION (for About page) -->
+<section class="approach bg-[#102d45] text-white py-[62px] lg:py-[86px]">
+  <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
+    <div class="section-head max-w-[680px] mb-[38px]">
+      <div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px] text-[#e8aa76]">How we work</div>
+      <h2>A clear process from first conversation to handover.</h2>
+      <p class="text-[#c4d6de]">Every project is different. Our approach starts with understanding the brief and ends with practical documentation and a focus on sustainable operation.</p>
+    </div>
+    <div class="steps grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="step border-t border-white/20 pt-[21px]"><div class="step-no text-[11px] font-black uppercase tracking-[0.14em] text-[#81d0c8]">STEP 01 / DISCOVER</div><h3>Understand the need</h3><p>Discuss project objectives, site context, community requirements, budget and expected outputs.</p></div>
+      <div class="step border-t border-white/20 pt-[21px]"><div class="step-no text-[11px] font-black uppercase tracking-[0.14em] text-[#81d0c8]">STEP 02 / ASSESS</div><h3>Survey &amp; investigate</h3><p>Review available information and undertake the required site assessment, measurements and technical investigations.</p></div>
+      <div class="step border-t border-white/20 pt-[21px]"><div class="step-no text-[11px] font-black uppercase tracking-[0.14em] text-[#81d0c8]">STEP 03 / DESIGN</div><h3>Plan the solution</h3><p>Develop practical designs, drawings, specifications, schedules and cost information appropriate to the brief.</p></div>
+      <div class="step border-t border-white/20 pt-[21px]"><div class="step-no text-[11px] font-black uppercase tracking-[0.14em] text-[#81d0c8]">STEP 04 / DELIVER</div><h3>Support &amp; hand over</h3><p>Coordinate implementation, supervise quality where commissioned, and provide handover documentation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section id="team" class="bg-white pt-[30px] pb-[72px] lg:pt-[40px] lg:pb-[100px]">
+  <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
+    <div class="section-head max-w-[680px] mb-10">
+      <div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">People behind the work</div>
+      <h2 class="text-[clamp(24px,3vw,32px)] font-extrabold leading-[1.15] tracking-[-0.02em] text-[#173047]">A multidisciplinary team.</h2>
+      <p class="mt-4 text-[15px] leading-[1.8] text-[#4a5e6d]">Meet the engineers, technical specialists and management staff who lead assignments and support delivery.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Member 1 -->
+      <div class="flex flex-col items-center text-center bg-[#f8fbfc] border border-[#dce4e7] rounded-[18px] p-6 shadow-[0_8px_24px_rgba(16,45,69,.03)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(16,45,69,.08)]">
+        <div class="w-24 h-24 shrink-0 rounded-full overflow-hidden bg-gradient-to-br from-[#d7ece7] to-[#b8d1d8] flex items-center justify-center text-xl font-black text-[#14516b] mb-4 border-4 border-white shadow-sm">
+          <img src="/assets/temwa.jpeg" alt="Temwani Chisunkha" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerText='TC';" />
+        </div>
+        <h3 class="text-[15px] font-extrabold text-[#173047] leading-[1.3] mb-1">Temwani Chisunkha</h3>
+        <div class="text-[11px] font-bold uppercase tracking-[0.06em] text-[#176b9a] mb-3">Managing Director, Hydrogeologist & Water Resources Specialist</div>
+        <p class="text-[12px] leading-[1.6] text-[#617484] mb-5 flex-grow">MSc. Hydrogeology & Environmental Engineering · Malawi Engineers Institution, Geotechnical Engineer</p>
+        <a href="/team/tc" class="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-[#dce4e7] bg-white text-[11px] font-extrabold text-[#173047] transition hover:border-[#176b9a] hover:text-[#176b9a] hover:shadow-sm mt-auto w-full">View full profile</a>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="flex flex-col items-center text-center bg-[#f8fbfc] border border-[#dce4e7] rounded-[18px] p-6 shadow-[0_8px_24px_rgba(16,45,69,.03)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(16,45,69,.08)]">
+        <div class="w-24 h-24 shrink-0 rounded-full overflow-hidden bg-gradient-to-br from-[#d7ece7] to-[#b8d1d8] flex items-center justify-center text-xl font-black text-[#14516b] mb-4 border-4 border-white shadow-sm">
+          <img src="/assets/Gome.jpeg" alt="Gomezgani Mwafulirwa" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerText='GM';" />
+        </div>
+        <h3 class="text-[15px] font-extrabold text-[#173047] leading-[1.3] mb-1">Gomezgani Mwafulirwa</h3>
+        <div class="text-[11px] font-bold uppercase tracking-[0.06em] text-[#176b9a] mb-3">Water Engineer, Hydraulic Design</div>
+        <p class="text-[12px] leading-[1.6] text-[#617484] mb-5 flex-grow">MSc. Water Resources Management & Development · Malawi Engineers Institution, Technician Engineer</p>
+        <a href="/team/gm" class="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-[#dce4e7] bg-white text-[11px] font-extrabold text-[#173047] transition hover:border-[#176b9a] hover:text-[#176b9a] hover:shadow-sm mt-auto w-full">View full profile</a>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="flex flex-col items-center text-center bg-[#f8fbfc] border border-[#dce4e7] rounded-[18px] p-6 shadow-[0_8px_24px_rgba(16,45,69,.03)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(16,45,69,.08)]">
+        <div class="w-24 h-24 shrink-0 rounded-full overflow-hidden bg-gradient-to-br from-[#d7ece7] to-[#b8d1d8] flex items-center justify-center text-xl font-black text-[#14516b] mb-4 border-4 border-white shadow-sm">
+          <img src="/assets/David.jpeg" alt="David Mwandira" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerText='DM';" />
+        </div>
+        <h3 class="text-[15px] font-extrabold text-[#173047] leading-[1.3] mb-1">David Mwandira</h3>
+        <div class="text-[11px] font-bold uppercase tracking-[0.06em] text-[#176b9a] mb-3">Hydrologist & Surface Water Supply Engineer</div>
+        <p class="text-[12px] leading-[1.6] text-[#617484] mb-5 flex-grow">BSc. Irrigation Engineering · Malawi Engineers Institution – Irrigation Engineer</p>
+        <a href="/team/dm" class="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-[#dce4e7] bg-white text-[11px] font-extrabold text-[#173047] transition hover:border-[#176b9a] hover:text-[#176b9a] hover:shadow-sm mt-auto w-full">View full profile</a>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="flex flex-col items-center text-center bg-[#f8fbfc] border border-[#dce4e7] rounded-[18px] p-6 shadow-[0_8px_24px_rgba(16,45,69,.03)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(16,45,69,.08)]">
+        <div class="w-24 h-24 shrink-0 rounded-full overflow-hidden bg-gradient-to-br from-[#d7ece7] to-[#b8d1d8] flex items-center justify-center text-xl font-black text-[#14516b] mb-4 border-4 border-white shadow-sm">
+          <img src="/assets/mlinda.jpeg" alt="Mlinda Mbale" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerText='MM';" />
+        </div>
+        <h3 class="text-[15px] font-extrabold text-[#173047] leading-[1.3] mb-1">Mlinda Mbale</h3>
+        <div class="text-[11px] font-bold uppercase tracking-[0.06em] text-[#176b9a] mb-3">Software Programmer (Developer)</div>
+        <p class="text-[12px] leading-[1.6] text-[#617484] mb-5 flex-grow">BSc. Computer Sciences, University of Malawi</p>
+        <a href="/team/mlinda" class="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-[#dce4e7] bg-white text-[11px] font-extrabold text-[#173047] transition hover:border-[#176b9a] hover:text-[#176b9a] hover:shadow-sm mt-auto w-full">View full profile</a>
+      </div>
+    </div>
+
+    <!-- View All Button (underlined link with icon) -->
+    <div class="mt-10 text-center">
+      <a href="/team" class="inline-flex items-center gap-2 text-[13px] font-extrabold text-[#173047] no-underline border-b-2 border-[#f2a900] pb-1 transition duration-200 hover:text-[#176b9a] hover:border-[#176b9a]">
+        View all team members
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
 <section class="contact bg-[#eff6ee] py-[62px] lg:py-[86px]" id="contact"><div class="container mx-auto w-full max-w-[1160px] px-[22px]"><div class="section-head max-w-[680px] mb-[38px]"><div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">Contact TECO</div><h2>Let&rsquo;s discuss your next project.</h2><p>Reach out for consultations, technical proposals, project partnerships or service enquiries.</p></div><div class="contact-grid grid grid-cols-1 lg:grid-cols-[.85fr_1.15fr] gap-[50px]"><div class="contact-info"><p>Use the contact details below as a starting point.</p>
 <div class="contact-detail mt-[22px] flex items-start gap-[13px]"><div class="mini-icon w-[38px] h-[38px] shrink-0 rounded-[10px] border border-[#dce4e7] bg-white grid place-items-center">✉</div><div><strong>Email</strong><span><a href="mailto:tecofarms@gmail.com">tecofarms@gmail.com</a></span></div></div>
 <div class="contact-detail mt-[22px] flex items-start gap-[13px]"><div class="mini-icon w-[38px] h-[38px] shrink-0 rounded-[10px] border border-[#dce4e7] bg-white grid place-items-center">&phone;</div><div><strong>Telephone</strong><span><a href="tel:+265884234348">+265 884 234 348</a><br/><a href="tel:+265996086141">+265 996 086 141</a></span></div></div>
@@ -334,7 +541,7 @@
 
       <!-- Column 3: Services -->
       <div>
-        <h4>Services section</h4>
+        <h4 class="text-base font-bold text-[#e8f1f4] mb-4">Services section</h4>
         <ul>
           <li><a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="/services/water-supply-engineering-design">Water Supply &amp; Engineering Design</a></li>
           <li><a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="/services/engineering-environmental-consultancy">Engineering &amp; Environmental Consultancy</a></li>

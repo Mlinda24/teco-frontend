@@ -4,7 +4,7 @@
 
 import {
   container, kicker, h2,
-  buildTeamRows, buildSharedTail,
+  buildSharedTail,
 } from './shared';
 
 const data = {
@@ -19,13 +19,11 @@ const data = {
   imageCaptionKicker: 'Evidence-based',
   imageCaptionText: 'Field investigations, modelling and audit-ready reporting',
   overview: [
-    'Good decisions about water, land and infrastructure start with good evidence. TECO’s multidisciplinary team carries out surface-water and groundwater investigations, hydrological and hydrogeological studies, engineering design, environmental assessment and technical advisory work across water, agriculture, WASH and civil infrastructure.',
-    'We support clients from the first terms of reference through to sign-off, combining engineering analysis, GIS, environmental safeguards and technical reporting so that records stand up to audit and remain useful long after the assignment ends.',
+    'Surface-water and groundwater investigations; hydrogeological and hydrological studies; water-resource assessment and modelling; river assessment, flood-risk mapping and weir/intake studies; engineering designs and technical drawings; environmental screening and impact assessments (EIA/ESIA); feasibility studies, project assessments and evaluations; GIS and spatial analysis; training, capacity building and technical advisory services.'
   ],
   highlights: [
     { value: '12', label: 'Boreholes assessed for groundwater development at Portland Cement Malawi, Balaka' },
     { value: '3-stage', label: 'Pumping tests: step-drawdown, constant-rate and recovery' },
-    { value: '1 m', label: 'Interval for drill-cutting sampling and lithological logging' },
   ],
   offerings: [
     ['Surface-water & groundwater investigations', 'River assessment, velocity measurement, groundwater investigations and hydrogeological studies to characterise water resources.'],
@@ -48,7 +46,6 @@ const data = {
   ],
   tools: ['QGIS / ArcGIS', 'ENVI', 'Good Earth', 'EPANET', 'mWater', 'Differential GPS', 'River velocity meter', 'Total station (partnership)', 'Borehole camera', 'Water quality meters', '100 m dipper meter', 'Geotron water detector'],
   standards: 'Our field procedures follow Malawi’s standard operating procedures for aquifer pumping tests, groundwater sampling and groundwater use permitting. Environmental work is aligned with Malawi’s EIA/ESIA requirements, and water quality results are assessed against MS733:2005.',
-  team: ['temwani', 'lawrence', 'david'],
   projects: [
     ['12-borehole groundwater assessment and pumping tests; Rivirivi River surface-water assessment, weir and intake feasibility', 'Portland Cement Malawi, Balaka', '2026–present'],
     ['Portable water supply project rapid assessment and design of a solar-powered gravity-fed system', 'ILLOVO', '2021'],
@@ -79,15 +76,9 @@ function hero(s) {
 
     <div class="relative">
       ${container(`
-        <nav aria-label="Breadcrumb" class="pt-8 text-xs text-[#d5e5eb]">
-          <a href="/" class="text-[#d5e5eb] no-underline hover:text-white">Home</a>
-          <span class="mx-2">/</span>
-          <a href="/services" class="text-[#d5e5eb] no-underline hover:text-white">Services</a>
-          <span class="mx-2">/</span>
-          <span class="text-white">${s.shortTitle}</span>
-        </nav>
-
-        <div class="pt-6 pb-14 lg:pb-20 max-w-[720px]">
+        <!-- Breadcrumb navigation removed -->
+        
+        <div class="pt-16 pb-14 lg:pb-20 max-w-[720px]">
           <div class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.16em] text-white mb-6">
             <span class="h-1.5 w-1.5 rounded-full" style="background:${s.accent}"></span>
             ${s.badge}
@@ -149,9 +140,6 @@ function offerings(s) {
         <div class="lg:sticky lg:top-32 self-start">
           ${kicker('Scope of services', s.accent)}
           ${h2('What we do, item by item.')}
-          <p class="mt-4 text-[13.5px] leading-[1.75] text-[#617484] max-w-[320px]">
-            Each line can be commissioned on its own or as part of a complete programme of works.
-          </p>
         </div>
         <ol class="border-t border-[#cfdcd6]">
           ${s.offerings.map(([title, text], i) => `
@@ -237,7 +225,6 @@ export function renderConsultancyPage() {
     offerings(data),
     process(data),
     tools(data),
-    buildTeamRows(data.team, data.accent),
     projects(data),
     buildSharedTail(data),
   ].join('\n');

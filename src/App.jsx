@@ -3,7 +3,7 @@ import siteContent from './content/siteContent.html?raw';
 import { SERVICES, renderServiceDetail } from './services';
 
 const ROUTES = [
-  { path: '/', label: 'Home', ids: ['hero', 'about', 'services'] },
+  { path: '/', label: 'Home', ids: ['hero', 'about', 'services', 'team'] },
   { path: '/about', label: 'About Us', ids: ['about', 'approach'] },
   { path: '/services', label: 'Services', ids: ['services'] },
   { path: '/projects', label: 'Projects', ids: ['projects', 'current-works'] },
@@ -169,6 +169,12 @@ export default function App() {
     const root = document.getElementById('site-shell');
     if (!root) return undefined;
     const linkHandlers = [];
+
+    // Hide the "View all team members" button when already on the /team page
+    const viewAllLink = root.querySelector('a[href="/team"]');
+    if (viewAllLink && viewAllLink.textContent.includes('View all team members')) {
+      viewAllLink.parentElement.style.display = route.path === '/team' ? 'none' : '';
+    }
 
     const homeLink = root.querySelector('#navLinks a[href="/"]');
     if (homeLink) {

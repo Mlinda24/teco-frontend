@@ -143,14 +143,9 @@ function hero(s) {
     
     <div class="relative z-10">
       ${container(`
-        <nav aria-label="Breadcrumb" class="pt-8 text-xs text-[#d5e5eb]">
-          <a href="/" class="text-[#d5e5eb] no-underline hover:text-white">Home</a>
-          <span class="mx-2">/</span>
-          <a href="/services" class="text-[#d5e5eb] no-underline hover:text-white">Services</a>
-          <span class="mx-2">/</span>
-          <span class="text-white">${s.shortTitle}</span>
-        </nav>
-        <div class="pt-6 pb-14 lg:pb-20 max-w-[720px]">
+        <!-- Breadcrumb navigation removed -->
+        
+        <div class="pt-16 pb-14 lg:pb-20 max-w-[720px]">
           <div class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.16em] text-white mb-6">
             <span class="h-1.5 w-1.5 rounded-full" style="background:${s.accent}"></span>
             ${s.badge}
