@@ -6,9 +6,9 @@ export const TEAM_MEMBERS = {
     name: 'Temwani Chisunkha',
     role: 'Managing Director, WASH Engineer and Water Resources Expert',
     image: '/assets/temwa.jpeg',
-    email: 'temwani@tecofarms.com',
-    phone: '+265 884 234 348',
-    overview: 'Temwani is a seasoned Water, Sanitation, and Hygiene (WASH) Engineer with over 8 years of experience. As the Managing Director, he leads TECO’s strategic direction while maintaining a strong technical focus on complex water resource challenges across Malawi.',
+    email: 'tchisunkha@teco.com',
+    linkedin: 'https://www.linkedin.com/in/temwani-chisunkha-b91218194/',
+    overview: "Temwani is WASH Engineer with over 8 years of experience. As the Managing Director, he leads TECO's strategic direction while maintaining a strong technical focus on complex water resource challenges across Malawi.",
     experience: [
       'Hydrogeological investigations, groundwater development, and water supply systems.',
       'Hydraulic assessments and system designs using EPANET, QGIS, mWater, and AutoCAD.',
@@ -17,7 +17,7 @@ export const TEAM_MEMBERS = {
     ],
     qualifications: [
       'MSc. Hydrogeology & Environmental Engineering',
-      'BSc. Water Engineering',
+      'BSc. Earth sciences',
       'Registered with the Malawi Engineers Institution (Geotechnical Engineer)'
     ],
     projects: [
@@ -31,9 +31,9 @@ export const TEAM_MEMBERS = {
     name: 'Gomezgani Mwafulirwa',
     role: 'Water Engineer and Hydraulic Design Expert',
     image: '/assets/Gome.jpeg',
-    email: 'gomezgani@tecofarms.com',
-    phone: '+265 884 234 348',
-    overview: 'Gomezgani specializes in hydraulic design, water supply infrastructure, and WASH engineering. He brings extensive experience in EPANET modelling, contractor supervision, and BOQ review to ensure every project meets rigorous technical standards.',
+    email: 'gmwafulirwa@teco.com',
+    linkedin: 'https://www.linkedin.com/in/gomezgani-g-p-mwafulirwa-67a05187/',
+    overview: "Gomezgani specializes in hydraulic design, water supply infrastructure, and WASH engineering. He brings extensive experience in EPANET modelling, contractor supervision, and BOQ review to ensure every project meets rigorous technical standards.",
     experience: [
       'Hydraulic design and modelling for community water supply networks.',
       'Contractor supervision and quality assurance on civil and water works.',
@@ -41,14 +41,15 @@ export const TEAM_MEMBERS = {
       'Design of water towers, storage tanks, and reticulation systems.'
     ],
     qualifications: [
-      'MSc. Water Resources Management & Development',
-      'BSc. Civil Engineering',
+      'MSc. Water Resources Management and Development',
+      'BSc. Water Resources Management and Development',
+      'GIS, Water Supply System Design, Project Management, Irrigation',
       'Registered with the Malawi Engineers Institution (Technician Engineer)'
     ],
     projects: [
       'Hydraulic assessment and redesign of a water supply network, Habitat For Humanity',
       'Water Storage & Network Design for community reticulation',
-      'Borehole drilling and construction of a solar powered water supply system, Salima'
+      'Borehole drilling and construction of a solar powered water supply system'
     ]
   },
   dm: {
@@ -56,13 +57,13 @@ export const TEAM_MEMBERS = {
     name: 'David Mwandira',
     role: 'Irrigation and Water Supply Engineer',
     image: '/assets/David.jpeg',
-    email: 'david@tecofarms.com',
-    phone: '+265 884 234 348',
-    overview: 'David brings 7 years of expertise in hydrology, irrigation engineering, and infrastructure construction. He is highly skilled in utilizing AutoCAD, Civil 3D, and GIS mapping to design sustainable agricultural water management solutions.',
+    email: 'dmwandira@teco.com',
+    linkedin: 'https://www.linkedin.com/in/david-mwandira-7515a51b4/',
+    overview: "David brings 7 years of expertise in hydrology, irrigation engineering, and infrastructure construction. He is highly skilled in utilizing AutoCAD, Civil 3D, and GIS mapping to design sustainable agricultural water management solutions.",
     experience: [
       'Irrigation scheme design and agricultural water management.',
       'Hydrological assessments and surface water research.',
-      'Solar-powered water systems and pump selection.',
+      'Solar powered water systems and pump selection.',
       'Engineering drawings, GIS mapping, and spatial analysis.'
     ],
     qualifications: [
@@ -77,24 +78,26 @@ export const TEAM_MEMBERS = {
   },
   mlinda: {
     id: 'mlinda',
-    name: 'Mlinda Mbale',
+    name: 'Mlinda Bishop Mbale',
     role: 'Information, Communication & Technology Officer (Software Developer)',
     image: '/assets/mlinda.jpeg',
-    email: 'mlinda@tecofarms.com',
-    phone: '+265 884 234 348',
-    overview: 'Mlinda manages TECO’s digital presence, internal systems, and software development. He bridges the gap between engineering data and user-friendly technology, ensuring our digital tools are as reliable as our infrastructure.',
+    email: 'mmbale@teco.com',
+    linkedin: 'https://www.linkedin.com/in/mlinda-bishop-mbale-7522113a3/',
+    overview: "Mlinda manages internal systems, and software development. He bridges the gap between engineering data and user-friendly technology, ensuring our digital tools are as reliable as our infrastructure.",
     experience: [
-      'Full-stack web development and database management.',
-      'UI/UX design and front-end implementation.',
+      'Full stack system development and database management.',
+      'System design and ICT consultancy.',
+      'UI/UX design and implementation.',
       'System administration and IT support.',
       'Digital transformation of engineering workflows.'
     ],
     qualifications: [
       'BSc. Computer Sciences, University of Malawi',
-      'Certified in modern web development frameworks'
+      'Certified full stack System Developer'
     ],
     projects: [
-      'Development of the TECO Farms & Engineering website',
+      'Chikanda site, www.chikanda.site',
+      'Teco Farms and engineering Limited, www.teco.com',
       'Internal project tracking and data management systems',
       'Digital mapping integration for field surveys'
     ]
@@ -104,9 +107,9 @@ export const TEAM_MEMBERS = {
     name: 'Lawrence Dyson Phiri',
     role: 'Hydrogeologist',
     image: '/assets/lawrence.jpeg',
-    email: 'lawrence@tecofarms.com',
-    phone: '+265 884 234 348',
-    overview: 'Lawrence is a dedicated Hydrogeologist specializing in geophysical investigations, borehole siting, and groundwater resource assessment. He ensures that every borehole is drilled in the optimal location for long-term sustainability.',
+    email: 'lphiri@teco.com',
+    linkedin: 'https://www.linkedin.com/in/lawrence-phiri-3a188b1ba/',
+    overview: "Lawrence is a dedicated Hydrogeologist specializing in geophysical investigations, borehole siting, and groundwater resource assessment. He ensures that every borehole is drilled in the optimal location for long-term sustainability.",
     experience: [
       'Geophysical investigations (resistivity surveys) for groundwater exploration.',
       'Borehole siting and drilling supervision.',

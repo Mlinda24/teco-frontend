@@ -2,72 +2,67 @@
 import React from 'react';
 import { TEAM_MEMBERS } from '../data/teamMembers';
 
-const container = (html) => `<div class="container mx-auto w-full max-w-[1160px] px-[22px]">${html}</div>`;
-
 export function renderTeamMemberProfile(id) {
   const member = TEAM_MEMBERS[id];
+  
   if (!member) {
     return `
       <section class="py-[100px] text-center">
-        ${container(`
+        <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
           <h1 class="text-3xl font-bold mb-4">Profile Not Found</h1>
           <p class="text-[#617484] mb-8">The team member you are looking for does not exist.</p>
           <a href="/team" class="inline-flex items-center justify-center px-[19px] py-[13px] rounded-lg bg-[#173047] text-white text-[13px] font-extrabold transition hover:brightness-110">
             &larr; Back to Team
           </a>
-        `)}
+        </div>
       </section>
     `;
   }
 
   return `
-    <!-- Header Section (Image on right, text on left) -->
     <section class="bg-white py-[60px] lg:py-[80px] border-b border-[#dce4e7]">
-      ${container(`
-        <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_.9fr] gap-10 lg:gap-16 items-center">
+      <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           
-          <!-- Left Content -->
           <div class="order-2 lg:order-1">
             <h1 class="text-[clamp(32px,4vw,48px)] font-extrabold text-[#173047] leading-[1.1] mb-3">${member.name}</h1>
             <p class="text-lg font-bold text-[#176b9a] uppercase tracking-[0.05em] mb-6">${member.role}</p>
             
             <div class="space-y-4 mb-8">
-              <a href="mailto:${member.email}" class="flex items-center gap-3 text-[15px] font-semibold text-[#4a5e6d] hover:text-[#f2a900] transition group w-fit">
-                <div class="w-10 h-10 rounded-full bg-[#eff6ee] grid place-items-center group-hover:bg-[#f2a900] group-hover:text-white transition">
+              <a href="mailto:${member.email}" class="flex items-center gap-3 text-[15px] font-semibold text-[#4a5e6d] hover:text-[#f2a900] transition">
+                <div class="w-10 h-10 rounded-full bg-[#eff6ee] grid place-items-center">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </div>
                 ${member.email}
               </a>
-              <a href="tel:${member.phone}" class="flex items-center gap-3 text-[15px] font-semibold text-[#4a5e6d] hover:text-[#f2a900] transition group w-fit">
-                <div class="w-10 h-10 rounded-full bg-[#eff6ee] grid place-items-center group-hover:bg-[#f2a900] group-hover:text-white transition">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              
+              <a href="${member.linkedin}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-[15px] font-semibold text-[#4a5e6d] hover:text-[#f2a900] transition">
+                <div class="w-10 h-10 rounded-full bg-[#eff6ee] grid place-items-center">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </div>
-                ${member.phone}
+                Connect on LinkedIn
               </a>
             </div>
             
             <p class="text-[15.5px] leading-[1.85] text-[#4a5e6d]">${member.overview}</p>
           </div>
 
-          <!-- Right Image -->
           <div class="order-1 lg:order-2">
             <div class="relative w-full max-w-[460px] mx-auto lg:ml-auto aspect-[3/4] overflow-hidden bg-[#f8f6ef]">
-              <img src="${member.image}" alt="${member.name}" class="w-full h-full object-cover object-top" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'w-full h-full flex items-center justify-center text-6xl font-black text-[#173047] opacity-20\\'>${member.name.split(' ').map(n=>n[0]).join('')}</div>';" />
+              <img src="${member.image}" alt="${member.name}" class="w-full h-full object-cover object-top" />
               
-              <!-- Bottom Tag (Name / Role) - No Shadow -->
-              <div class="absolute bottom-0 inset-x-0 bg-[#173047]/95 backdrop-blur-sm text-white px-6 py-4">
-                <div class="text-[10px] uppercase tracking-[0.05em] mb-1 opacity-80">${member.role.split(',')[0]}</div>
+              <div class="absolute bottom-0 inset-x-0 bg-[#173047]/95 text-white px-6 py-4">
+                <div class="text-[13px] uppercase tracking-[0.05em] mb-1 opacity-80">${member.role.split(',')[0]}</div>
               </div>
             </div>
           </div>
 
         </div>
-      `)}
+      </div>
     </section>
 
-    <!-- Details Section (Experience, Qualifications, Projects) -->
     <section class="bg-[#f8fbfc] py-[72px] lg:py-[100px]">
-      ${container(`
+      <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
         <div class="max-w-[900px] mx-auto">
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 mb-12">
@@ -87,7 +82,7 @@ export function renderTeamMemberProfile(id) {
               <ul class="space-y-3">
                 ${member.qualifications.map(qual => `
                   <li class="flex items-start gap-3 text-[14.5px] leading-[1.6] text-[#4a5e6d]">
-                    <svg class="w-5 h-5 text-[#f2a900] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
+                    <svg class="w-5 h-5 text-[#f2a900] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/></svg>
                     ${qual}
                   </li>
                 `).join('')}
@@ -114,7 +109,7 @@ export function renderTeamMemberProfile(id) {
           </div>
 
         </div>
-      `)}
+      </div>
     </section>
   `;
 }

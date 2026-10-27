@@ -105,8 +105,6 @@ export default function App() {
     setHeroImage(0);
   }, [path]);
 
-  // Scroll to top ONLY when the path changes (navigating between pages)
-  // Do not scroll on the very first render.
   useEffect(() => {
     if (prevPathRef.current !== path) {
       window.scrollTo(0, 0);
@@ -184,13 +182,11 @@ export default function App() {
     if (!root) return undefined;
     const linkHandlers = [];
 
-    // Hide the 5th team member on the home page
     const teamCards = root.querySelectorAll('#team .grid > div');
     if (teamCards.length >= 5) {
       teamCards[4].style.display = route.path === '/' ? 'none' : '';
     }
 
-    // Hide the "View all team members" button when already on the /team page
     const viewAllLink = root.querySelector('a[href="/team"]');
     if (viewAllLink && viewAllLink.textContent.includes('View all team members')) {
       viewAllLink.parentElement.style.display = route.path === '/team' ? 'none' : '';
