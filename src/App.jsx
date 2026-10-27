@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useRef } from 'react';
 import siteContent from './content/siteContent.html?raw';
 import { SERVICES, renderServiceDetail } from './services';
+import { renderTeamMemberProfile } from './pages/TeamMemberProfile';
 
 const ROUTES = [
   { path: '/', label: 'Home', ids: ['hero', 'about', 'services', 'team'] },
@@ -26,18 +27,25 @@ const HERO_IMAGES = [
   '/assets/picture5.jpg',
 ];
 
-// How long each hero image is displayed (ms)
 const HERO_INTERVAL_MS = 5000;
 
 const SERVICE_ROUTE = /^\/services\/([^/]+)$/;
+const TEAM_ROUTE = /^\/team\/([^/]+)$/;
 
 function routeFor(path) {
   const normalized = path.replace(/\/+$/, '') || '/';
+  
   const match = normalized.match(SERVICE_ROUTE);
   if (match && SERVICES[match[1]]) {
     const service = SERVICES[match[1]];
     return { path: normalized, label: service.shortTitle, ids: [], service };
   }
+
+  const teamMatch = normalized.match(TEAM_ROUTE);
+  if (teamMatch) {
+    return { path: normalized, label: 'Team Profile', ids: [], teamId: teamMatch[1] };
+  }
+
   return ROUTES.find((r) => r.path === normalized) || ROUTES[0];
 }
 
@@ -45,8 +53,8 @@ export default function App() {
   const [path, setPath] = useState(window.location.pathname);
   const [isNavigating, setIsNavigating] = useState(false);
   const [heroImage, setHeroImage] = useState(0);
-  // Increment this to force-restart the auto-advance timer after manual nav
   const [heroTick, setHeroTick] = useState(0);
+  const prevPathRef = useRef(path);
 
   const [markup, setMarkup] = useState({
     topline: '', header: '', footer: '', toast: '', sections: {},
@@ -78,6 +86,7 @@ export default function App() {
 
   const pageContent = useMemo(() => {
     if (route.service) return renderServiceDetail(route.service);
+    if (route.teamId) return renderTeamMemberProfile(route.teamId);
     return route.ids.map((id) => markup.sections[id] || '').join('\n');
   }, [route, markup]);
 
@@ -85,8 +94,6 @@ export default function App() {
     HERO_IMAGES.forEach((src) => { const image = new Image(); image.src = src; });
   }, []);
 
-  // Auto-advance the hero every 5s. Re-runs whenever `heroTick` changes,
-  // so manual Next/Prev clicks reset the timer (no immediate double-jump).
   useEffect(() => {
     const timer = window.setInterval(() => {
       setHeroImage((c) => (c + 1) % HERO_IMAGES.length);
@@ -98,7 +105,15 @@ export default function App() {
     setHeroImage(0);
   }, [path]);
 
-  // Apply the active image opacity
+  // Scroll to top ONLY when the path changes (navigating between pages)
+  // Do not scroll on the very first render.
+  useEffect(() => {
+    if (prevPathRef.current !== path) {
+      window.scrollTo(0, 0);
+      prevPathRef.current = path;
+    }
+  }, [path]);
+
   useEffect(() => {
     const apply = () => {
       const images = document.querySelectorAll('#site-shell .hero-carousel-image');
@@ -124,7 +139,6 @@ export default function App() {
     };
   }, [heroImage, pageContent]);
 
-  // Wire up Next / Prev buttons in the hero (they live inside dangerouslySetInnerHTML)
   useEffect(() => {
     const root = document.getElementById('site-shell');
     if (!root) return undefined;
@@ -165,10 +179,16 @@ export default function App() {
 
   useEffect(() => {
     document.title = `${route.label} | TECO Farms & Engineering`;
-    window.scrollTo(0, 0);
+    
     const root = document.getElementById('site-shell');
     if (!root) return undefined;
     const linkHandlers = [];
+
+    // Hide the 5th team member on the home page
+    const teamCards = root.querySelectorAll('#team .grid > div');
+    if (teamCards.length >= 5) {
+      teamCards[4].style.display = route.path === '/' ? 'none' : '';
+    }
 
     // Hide the "View all team members" button when already on the /team page
     const viewAllLink = root.querySelector('a[href="/team"]');
