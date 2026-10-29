@@ -1,7 +1,11 @@
 import { useEffect, useMemo, useState, useRef } from 'react';
+import { createRoot } from 'react-dom/client';
 import siteContent from './content/siteContent.html?raw';
 import { SERVICES, renderServiceDetail } from './services';
 import { renderTeamMemberProfile } from './pages/TeamMemberProfile';
+import { renderNewsArticle } from './pages/NewsArticle';
+import { renderNewsPage } from './pages/News';
+import HomeNewsFeed from './components/HomeNewsFeed';
 
 const ROUTES = [
   { path: '/', label: 'Home', ids: ['hero', 'about', 'services', 'team'] },
@@ -11,6 +15,7 @@ const ROUTES = [
   { path: '/clients', label: 'Our Clients', ids: ['clients', 'partners'] },
   { path: '/team', label: 'Our Team', ids: ['team'] },
   { path: '/contact', label: 'Contact', ids: ['contact'] },
+  { path: '/news', label: 'Newsroom', ids: [] },
 ];
 
 const NAV_ROUTES = {
@@ -31,6 +36,7 @@ const HERO_INTERVAL_MS = 5000;
 
 const SERVICE_ROUTE = /^\/services\/([^/]+)$/;
 const TEAM_ROUTE = /^\/team\/([^/]+)$/;
+const NEWS_ROUTE = /^\/news\/([^/]+)$/;
 
 function routeFor(path) {
   const normalized = path.replace(/\/+$/, '') || '/';
@@ -44,6 +50,11 @@ function routeFor(path) {
   const teamMatch = normalized.match(TEAM_ROUTE);
   if (teamMatch) {
     return { path: normalized, label: 'Team Profile', ids: [], teamId: teamMatch[1] };
+  }
+
+  const newsMatch = normalized.match(NEWS_ROUTE);
+  if (newsMatch) {
+    return { path: normalized, label: 'News Article', ids: [], newsSlug: newsMatch[1] };
   }
 
   return ROUTES.find((r) => r.path === normalized) || ROUTES[0];
@@ -85,10 +96,34 @@ export default function App() {
   }, []);
 
   const pageContent = useMemo(() => {
+    if (route.newsSlug) return renderNewsArticle(route.newsSlug);
+    if (route.path === '/news') return renderNewsPage();
     if (route.service) return renderServiceDetail(route.service);
     if (route.teamId) return renderTeamMemberProfile(route.teamId);
+    
+    if (route.path === '/') {
+      const sections = route.ids.map((id) => {
+        const content = markup.sections[id] || '';
+        if (id === 'team') {
+          return `<div id="home-news-feed-root"></div>\n${content}`;
+        }
+        return content;
+      });
+      return sections.join('\n');
+    }
+    
     return route.ids.map((id) => markup.sections[id] || '').join('\n');
   }, [route, markup]);
+
+  useEffect(() => {
+    if (route.path === '/' && pageContent) {
+      const container = document.getElementById('home-news-feed-root');
+      if (container && !container.hasChildNodes()) {
+        const root = createRoot(container);
+        root.render(<HomeNewsFeed />);
+      }
+    }
+  }, [route.path, pageContent]);
 
   useEffect(() => {
     HERO_IMAGES.forEach((src) => { const image = new Image(); image.src = src; });
@@ -182,7 +217,8 @@ export default function App() {
     if (!root) return undefined;
     const linkHandlers = [];
 
-    const teamCards = root.querySelectorAll('#team .grid > div');
+    // FIX: Specifically target the team member cards inside the team section's grid
+    const teamCards = root.querySelectorAll('#team .grid > div.flex.flex-col');
     if (teamCards.length >= 5) {
       teamCards[4].style.display = route.path === '/' ? 'none' : '';
     }
