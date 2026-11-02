@@ -5,7 +5,7 @@ export default function HomeNewsFeed() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/news/')
+      fetch('https://teco-backend.onrender.com/api/news/') // <-- Updated URL
       .then(res => res.json())
       .then(data => setPosts(data.slice(0, 4))) // Show latest 4 posts
       .catch(err => console.error("Error fetching news:", err));

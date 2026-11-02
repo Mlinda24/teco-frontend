@@ -21,11 +21,6 @@ const data = {
     'TECO designs, builds and supervises the civil and structural works that make water systems and community infrastructure last: foundations, towers, tanks, tap stands, trenches, pump rooms, buildings, drainage and water-related structures. Quality is checked at every critical stage, from the first bag of cement to community handover.',
     'Our engineers and quantity surveyor work together so drawings, costs and site practice stay aligned, and works comply with approved designs and specifications, with occupational health and safety and quality assurance built into every assignment.',
   ],
-  highlights: [
-    { value: '7 m / 10 m', label: 'Water towers designed and supervised for solar-powered systems' },
-    { value: '1 m', label: 'Standard trench depth, 40–50 cm wide, protecting pipes from loads and hoes' },
-    { value: '40,000 L', label: 'Concrete storage tanks rehabilitated at Wenya, Chitipa (two tanks)' },
-  ],
   offerings: [
     ['Civil & structural engineering design', 'Structural and civil design for water-related and community infrastructure, with AutoCAD and Civil 3D drawings.'],
     ['Residential & commercial buildings', 'Design and construction of residential and commercial buildings managed against approved drawings and specifications.'],
@@ -104,21 +99,6 @@ function hero(s) {
   </section>`;
 }
 
-function stats(s) {
-  return `
-  <section class="bg-white border-b border-[#dce4e7]">
-    ${container(`
-      <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#e6edf0] py-10">
-        ${s.highlights.map((h) => `
-          <div class="px-1 md:px-8 py-5 md:py-0">
-            <div class="text-[44px] lg:text-[56px] font-extrabold leading-none tracking-[-0.02em]" style="color:${s.accent}">${h.value}</div>
-            <div class="mt-3 text-[12.5px] leading-[1.6] text-[#617484] max-w-[280px]">${h.label}</div>
-          </div>`).join('')}
-      </div>
-    `)}
-  </section>`;
-}
-
 function overview(s) {
   return `
   <section class="py-[72px] lg:py-[100px] bg-white">
@@ -145,10 +125,7 @@ function offerings(s) {
       <div class="grid grid-cols-1 lg:grid-cols-[.7fr_1.3fr] gap-10 lg:gap-[80px]">
         <div class="lg:sticky lg:top-32 self-start">
           ${kicker('Scope of services', s.accent)}
-          ${h2('What we do, item by item.')}
-          <p class="mt-4 text-[13.5px] leading-[1.75] text-[#617484] max-w-[320px]">
-            Each line can be commissioned on its own or as part of a complete programme of works.
-          </p>
+          ${h2('What we do')}
         </div>
         <ol class="border-t border-[#cfdcd6]">
           ${s.offerings.map(([title, text], i) => `
@@ -229,7 +206,6 @@ function projects(s) {
 export function renderCivilPage() {
   return [
     hero(data),
-    stats(data),
     overview(data),
     offerings(data),
     process(data),

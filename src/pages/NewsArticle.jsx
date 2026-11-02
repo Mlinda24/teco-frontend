@@ -5,7 +5,8 @@ export function renderNewsArticle(slug) {
       <div class="py-20 text-center text-gray-500">Loading article...</div>
     </div>
     <script>
-      fetch('http://127.0.0.1:8000/api/news/${slug}/')
+        fetch('https://teco-backend.onrender.com/api/news/${slug}/') /* <-- Updated URL */
+
         .then(res => {
           if (!res.ok) throw new Error('Not found');
           return res.json();

@@ -16,7 +16,7 @@ export function renderNewsPage() {
     </section>
 
     <script>
-      fetch('http://127.0.0.1:8000/api/news/')
+        fetch('https://teco-backend.onrender.com/api/news/') /* <-- Updated URL */
         .then(res => res.json())
         .then(posts => {
           const container = document.getElementById('news-list-container');
