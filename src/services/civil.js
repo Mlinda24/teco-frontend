@@ -18,7 +18,7 @@ const data = {
   imageCaptionKicker: 'On site',
   imageCaptionText: 'Quality checks at every critical stage',
   overview: [
-    'TECO designs, builds and supervises the civil and structural works that make water systems and community infrastructure last: foundations, towers, tanks, tap stands, trenches, pump rooms, buildings, drainage and water-related structures. Quality is checked at every critical stage, from the first bag of cement to community handover.',
+    'TECO Farms & Engineering Ltd undertakes civil engineering and construction works, delivering quality infrastructure through professional supervision, technical precision and effective project management. Our capabilities include construction of water storage tanks, reservoirs, weirs, dams, concrete structures, building works, drainage systems and associated civil infrastructure. We provide services across the project lifecycle, from engineering drawings and structural design to construction supervision and project completion. We are committed to delivering durable, cost-effective and high-quality infrastructure that meets client specifications and recognised engineering standards.',
     'Our engineers and quantity surveyor work together so drawings, costs and site practice stay aligned, and works comply with approved designs and specifications, with occupational health and safety and quality assurance built into every assignment.',
   ],
   offerings: [

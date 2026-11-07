@@ -19,10 +19,10 @@ const data = {
   imageCaptionKicker: 'Evidence-based',
   imageCaptionText: 'Field investigations, modelling and audit-ready reporting',
   overview: [
-    'Surface-water and groundwater investigations; hydrogeological and hydrological studies; water-resource assessment and modelling; river assessment, flood-risk mapping and weir/intake studies; engineering designs and technical drawings; environmental screening and impact assessments (EIA/ESIA); feasibility studies, project assessments and evaluations; GIS and spatial analysis; training, capacity building and technical advisory services.'
+    'We provide professional engineering and environmental consultancy services that support sustainable infrastructure development and responsible resource management. Our expertise includes hydrogeological investigations, geophysical surveys, hydrological assessments, river and catchment studies, environmental screening, Environmental Impact Assessments (EIA), and project planning and evaluation. We combine technical expertise, scientific analysis and modern engineering tools to deliver accurate assessments and practical recommendations. Our approach ensures that every project is technically sound, environmentally responsible and aligned with sustainable development objectives'
   ],
   highlights: [
-    { value: '12', label: 'Boreholes assessed for groundwater development at Portland Cement Malawi, Balaka' },
+    { value: '20', label: 'Boreholes assessed for groundwater development at Portland Cement Malawi, Balaka' },
     { value: '3-stage', label: 'Pumping tests: step-drawdown, constant-rate and recovery' },
   ],
   offerings: [

@@ -11,38 +11,44 @@ const data = {
   accent: '#176b9a',
   badge: 'Water',
   shortTitle: 'Water Supply & Engineering Design',
-  title: 'Water Supply and Engineering Design',
+  title: 'Solar powered water systems designed and constructed',
   tagline: 'Reliable Water. Resilient communities',
   imageAlt: 'TECO Farms water infrastructure project',
   imageCaptionKicker: 'Solar pumping',
   imageCaptionText: 'Designed for real community needs',
   overview: [
-    'From the first community meeting to commissioning, TECO designs, supervises and rehabilitates water supply systems that people can depend on. We cover borehole siting, drilling supervision, pumping tests, hydraulic modelling, solar-powered pumping, engineering drawings and construction supervision.',
-    'Every design is built on ground-truth data: precision GPS mapping, soil and topography assessment, pumping-test analysis and EPANET hydraulic models, so pipe sizes, pump selection and tank positions respond to what is actually on site.',
+    'TECO Farms & Engineering Ltd delivers comprehensive water supply solutions, from feasibility studies and technical design to construction and commissioning. Our expertise covers groundwater exploration, borehole drilling, pumping tests, water treatment, solar-powered water systems, irrigation and water reticulation networks. We specialise in designing sustainable, efficient and reliable water infrastructure for communities, institutions, industries and agricultural enterprises. Through innovative engineering and practical solutions, we are committed to improving water access and security',
+    'TECO Farms & Engineering Ltd delivers integrated engineering solutions through systematic field investigations, feasibility studies, technical design, construction supervision and project commissioning. We combine field-based data collection, modern engineering tools and technical expertise, including GPS surveys, geophysical investigations, Google Earth Pro, GIS, CAD and hydraulic modelling, to develop accurate, efficient and sustainable solutions. Our approach transforms technical assessments into reliable infrastructure, ensuring quality, performance and lasting impact.',
   ],
   highlights: [
-    { value: '8', label: 'Solar-powered water systems drilled, designed and supervised in Zomba' },
-    { value: '100', label: 'Tap solar-powered water system designed and built in Chikwawa' },
-    { value: '152', label: 'Water kiosks served by the Wenya system we rehabilitated in Chitipa' },
+    { value: 'over 200', label: 'taps and kiosks completed' },
+    { value: 'over 188', label: 'Boreholes drilled' },
   ],
   offerings: [
     ['Engineering, development and environmental consultancy', 'Surface-water and groundwater investigations; hydrogeological and hydrological studies; water-resource assessment and modelling; river assessment, flood-risk mapping and weir/intake studies; engineering designs and technical drawings; environmental screening and impact assessments (EIA/ESIA); feasibility studies, project assessments and evaluations; GIS and spatial analysis; training, capacity building and technical advisory services.'],
-    ['Geophysical & hydrogeological surveys', 'Groundwater investigations, borehole siting reports with GPS coordinates and priority/backup sites, and hydrogeological assessments.'],
-    ['Pumping tests & borehole performance', 'Step-drawdown, 4-hour constant-rate and recovery tests (to 90% recovery), plus borehole performance assessment and pre-rehabilitation evaluation.'],
-    ['Surface water supply', 'Designing of surface water supply infustructure'],
-    ['Water reticulation networks', 'Google Earth and EPANET models giving pipe diameters, lengths, base demand and operating pressures, followed by AutoCAD engineering drawings.'],
-    ['Storage tanks, pump selection & hydraulics', 'Design of 7 m and 10 m water towers, tank sizing, tap stands, pump rooms and borehole manholes, with full hydraulic design.'],
-    ['Irrigation water systems', 'Small-scale and solar-powered irrigation scheme design, with surveys, hydraulic layouts and drawings.'],
-    ['Rehabilitation, commissioning & O&M', 'Assessment and rehabilitation of existing networks and intakes, commissioning, community training and operational support.'],
+    ['Geophysical & hydrogeological surveys', 'Groundwater investigations and borehole siting, delivered as siting reports with GPS coordinates and identified priority and backup sites, supported by full hydrogeological assessment.'],
+    ['Borehole drilling', 'Drilling and construction of production boreholes with 1 m sample logging, casing and screen design, and borehole development, alongside performance assessment and pre-rehabilitation evaluation of existing boreholes.'],
+    ['Pumping tests', 'Step-drawdown, 4-hour constant-rate and recovery tests (to 90% recovery) to establish safe yield, pump setting depth and long-term borehole performance.'],
+    ['Water quality sampling', 'Water quality sampling and analysis to Malawi Bureau of Standards requirements, informing treatment design, source protection and fitness-for-use decisions.'],
+    ['Civil works & Afridev pump installation', 'Civil works and Afridev handpump installation for community handpumps, including aprons, drainage and pump-head assembly.'],
+    ['Mapping & hydraulic design', 'Mapping and hydraulic design using EPANET, TDH and pump-curve analysis, Google Earth, ArcGIS and elevation models to size pipes, tanks and pumps against real site conditions.'],
+    ['Engineering drawings', 'Engineering drawings and technical documentation — layouts, reticulation networks, tank and tower details, and as-built records.'],
+    ['Construction', 'Construction of the water system to the design, with construction supervision and quality control throughout.'],
+    ['Testing, commissioning & handover', 'Verification of system performance through operational testing, with technical documentation provided and local operators trained in operation and maintenance.'],
   ],
-  processTitle: 'From first survey to final handover.',
+
+  // ---------- Irrigation section (rendered by process()) ----------
+  processKicker: 'Irrigation systems',
+  processTitle: 'Are you interested in Irrigation Services?',
+  processIntro: 'Engineering efficient irrigation systems for sustainable agricultural productivity.',
   process: [
-    ['Survey & siting', 'Community meetings, geophysical surveys (VES/HEP), borehole siting with GPS coordinates, and priority/backup sites identified.'],
-    ['Drill & test', 'Drilling supervision with 1 m sample logging, casing and screen design, development, and a 4-hour constant-rate pumping test to 90% recovery.'],
-    ['Design', 'TDH calculation, pump-curve selection, solar sizing, tank and tower design, EPANET reticulation modelling and AutoCAD drawings.'],
-    ['Construct & supervise', 'Construction supervision, quality control, commissioning and as-built documentation.'],
-    ['Train & hand over', 'Community O&M training, spares and documentation handover, with post-completion support.'],
+    ['Desk studies, field surveys & site assessment', 'Review project requirements, assess crop water demand and available water resources, and undertake GPS mapping, topographical surveys, soil assessments and site investigations.'],
+    ['Water resources & irrigation demand assessment', 'Evaluate water availability and quality through source assessments, pumping tests where applicable, and water quality analysis. Determine crop water requirements using climatic data, evapotranspiration (ETo), crop coefficients (Kc) and irrigation efficiency.'],
+    ['Engineering design & hydraulic modelling', 'Develop irrigation layouts for drip, sprinkler or surface irrigation systems. Apply GIS, Google Earth, ArcGIS and elevation models alongside hydraulic calculations to determine flow rates, pipe sizing, operating pressures, pump capacity and Total Dynamic Head (TDH).'],
+    ['Engineering drawings & BOQ preparation', 'Prepare detailed engineering drawings, technical specifications and system layouts. Generate comprehensive Bills of Quantities (BOQs) directly from the approved designs, covering materials, equipment, labour and associated project costs.'],
+    ['Construction, testing & commissioning', 'Undertake installation of pumps, filtration units, pipelines, valves and irrigation equipment. Conduct pressure, leakage and performance tests, prepare as-built documentation and train beneficiaries in system operation and maintenance.'],
   ],
+
   tools: ['EPANET', 'AutoCAD', 'Google Earth', 'ArcGIS / QGIS', 'mWater', 'TDH & pump-curve design', 'Geotron water detector', 'PRD drilling rig (partnership)', 'Borehole camera', 'Submersible pumps (3–11.7 m³/h)', '100 m dipper meter', 'Water quality meters', 'GPS', '6.5 kVA generator'],
   standards: 'Work is aligned with Malawi’s technical manual for water wells and groundwater monitoring systems, the standard operating procedures for aquifer pumping tests and for drilling and construction of production boreholes, and Malawi Bureau of Standards water quality requirements.',
 
@@ -60,9 +66,6 @@ const data = {
 // ---------- Section builders ----------
 
 function hero(s) {
-  // Using a unique class prefix "teco-water" to avoid React stripping/clashing
-  // and to guarantee the keyframes are namespaced. The animation fades between
-  // the two images every 5s (10s total loop, 50/50 split with a fade in between).
   return `
   <style>
     @keyframes tecoWaterFadeA {
@@ -86,29 +89,24 @@ function hero(s) {
   </style>
 
   <section class="relative overflow-hidden text-white bg-[#0b2437]">
-    
-    <!-- Two stacked images that crossfade every 5s -->
-    <img 
-      src="/assets/Picture4.jpg" 
-      alt="" 
+    <img
+      src="/assets/Picture4.jpg"
+      alt=""
       aria-hidden="true"
-      class="teco-water-bg-a absolute inset-0 h-full w-full object-cover object-center" 
+      class="teco-water-bg-a absolute inset-0 h-full w-full object-cover object-center"
     />
-    <img 
-      src="/assets/water1.jpg" 
-      alt="" 
+    <img
+      src="/assets/water1.jpg"
+      alt=""
       aria-hidden="true"
-      class="teco-water-bg-b absolute inset-0 h-full w-full object-cover object-center" 
+      class="teco-water-bg-b absolute inset-0 h-full w-full object-cover object-center"
     />
 
-    <!-- Overlays -->
     <div class="absolute inset-0 bg-gradient-to-r from-[#0b2437]/80 via-[#0b2437]/50 to-transparent pointer-events-none"></div>
     <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0b2437]/70 to-transparent pointer-events-none"></div>
-    
+
     <div class="relative z-10">
       ${container(`
-        <!-- Breadcrumb navigation removed -->
-        
         <div class="pt-16 pb-14 lg:pb-20 max-w-[720px]">
           <div class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.16em] text-white mb-6">
             <span class="h-1.5 w-1.5 rounded-full" style="background:${s.accent}"></span>
@@ -144,7 +142,8 @@ function stats(s) {
 }
 
 function overview(s) {
-  if (!Array.isArray(s.overview) || !s.overview.length) return '';
+  if (!Array.isArray(s.overview) || s.overview.length < 2) return '';
+  const own = s.overview.slice(1); // skip overview[0] — it already appears in the hero
   return `
   <section class="py-[72px] lg:py-[100px] bg-white">
     ${container(`
@@ -152,11 +151,11 @@ function overview(s) {
         <div>
           ${kicker('Overview', s.accent)}
           <p class="text-[clamp(20px,2.2vw,26px)] font-extrabold leading-[1.3] tracking-[-0.015em] text-[#173047]">
-            A single technical partner from first survey to final handover.
+            One technical partner from initial assessment to final commissioning.
           </p>
         </div>
         <div class="space-y-5 text-[15.5px] leading-[1.9] text-[#3d566a] max-w-[640px]">
-          ${s.overview.map((p) => `<p>${p}</p>`).join('')}
+          ${own.map((p) => `<p>${p}</p>`).join('')}
         </div>
       </div>
     `)}
@@ -170,7 +169,6 @@ function offerings(s) {
     ${container(`
       <div class="grid grid-cols-1 lg:grid-cols-[.7fr_1.3fr] gap-10 lg:gap-[80px]">
         <div class="lg:sticky lg:top-32 self-start">
-          ${kicker('Scope of services', s.accent)}
           ${h2('What we offer')}
         </div>
         <ol class="border-t border-[#cfdcd6]">
@@ -193,8 +191,9 @@ function process(s) {
   <section class="bg-white py-[72px] lg:py-[100px]">
     ${container(`
       <div class="max-w-[720px] mb-12">
-        ${kicker('How it runs', s.accent)}
+        ${kicker(s.processKicker || 'How it runs', s.accent)}
         ${h2(title)}
+        ${s.processIntro ? `<p class="mt-4 text-[15px] leading-[1.8] text-[#3d566a] max-w-[560px]">${s.processIntro}</p>` : ''}
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-10">
         ${s.process.map(([stepTitle, text], i) => `
