@@ -92,21 +92,49 @@
   </div>
 </div>
 
-<section id="about" class="py-16 lg:py-24 bg-gradient-to-br from-[#f8fbfb] to-[#eef5f4] relative overflow-hidden">
+<section id="about" class="py-6 from-[#f8fbfb] to-[#eef5f4] relative overflow-hidden">
   <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
     <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#176b9a]/5 blur-3xl"></div>
     <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[#f2a900]/5 blur-3xl"></div>
   </div>
   <div class="container about-grid mx-auto w-full max-w-[1160px] px-[22px] grid grid-cols-1 lg:grid-cols-[.95fr_1.05fr] gap-8 lg:gap-[60px] items-stretch relative z-10">
-    <div class="relative aspect-[4/5] w-full overflow-hidden rounded-[20px] bg-white shadow-[0_20px_50px_rgba(16,45,69,.08)] border border-white">
-      <img src="/assets/7.jpg" alt="TECO Farms engineering project" class="absolute inset-0 z-0 h-full w-full object-cover"/>
+    <div class="relative w-full flex flex-col">
+
+      <!-- The photo frame -->
+      <div class="group relative aspect-[4/5] w-full overflow-hidden rounded-[10px] bg-[#0b2437] shadow-[0_30px_70px_-15px_rgba(16,45,69,.35)] ring-1 ring-white/60">
+        <img
+          src="/assets/who.jpeg"
+          alt="TECO Farms & Engineering field team on site"
+          class="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
+        />
+
+        <!-- Soft gradient for legibility + depth -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0b2437]/70 via-transparent to-transparent pointer-events-none"></div>
+
+        <!-- Thin inner highlight ring -->
+        <div class="absolute inset-0 rounded-[24px] ring-1 ring-inset ring-white/20 pointer-events-none"></div>
+      </div>
+
+      <!-- Caption plate (below the image) -->
+      <div class="mt-6 flex items-center gap-3 rounded-2xl border border-[#dce4e7] bg-white px-4 py-3 shadow-[0_10px_30px_rgba(16,45,69,.08)]">
+        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#e1f2ef] text-[#176b9a]">
+          <svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3.5S6.5 10.1 6.5 14.2a5.5 5.5 0 0 0 11 0C17.5 10.1 12 3.5 12 3.5Z"/>
+          </svg>
+        </span>
+        <div class="leading-tight">
+          <div class="text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#f2a900]">On site</div>
+          <div class="text-[12.5px] font-extrabold text-[#173047]">Engineering with communities across Malawi</div>
+        </div>
+      </div>
     </div>
-    <div class="about-copy bg-white/70 backdrop-blur-sm p-8 lg:p-10 rounded-[24px] border border-white shadow-[0_10px_40px_rgba(16,45,69,.04)] h-full flex flex-col justify-center">
+
+    <div class="about-copy bg-white/70 backdrop-blur-sm p-8 lg:p-10 rounded-[15px] border border-white h-full flex flex-col justify-center">
       <div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-3">Who we are</div>
-      <h2 class="text-[clamp(24px,3vw,32px)] font-extrabold leading-[1.15] tracking-[-0.02em] text-[#173047] mb-6">
+      <h2 class="text-[clamp(24px,3vw,32px)] font-extrabold leading-[1.15] tracking-[-0.02em] text-[#173047]">
         TECO Farms & Engineering Limited
       </h2>
-      <div class="space-y-4 text-[14.5px] leading-[1.8] text-[#4a5e6d] mb-8">
+      <div class="space-y-4 text-[14.5px] leading-[1.8] text-[#4a5e6d]">
         <p>A Malawian company established in November 2021, with a commitment to delivering practical, reliable and sustainable solutions in water, engineering, agriculture and environmental management.</p>
         <p>TECO Farms & Engineering Ltd brings together multidisciplinary technical expertise in Construction, surface water and groundwater, water engineering, irrigation, civil engineering and environmental assessment. Our approach combines field investigations, engineering analysis, design, construction supervision and technical consultancy to develop solutions that respond to site conditions and client requirements.</p>
       </div>
@@ -120,7 +148,7 @@
         <li class="flex items-center gap-2 rounded-lg border border-[#dce4e7] bg-white px-3 py-2 text-[12.5px] font-semibold text-[#173047] shadow-[0_2px_4px_rgba(16,45,69,.02)] transition hover:border-[#176b9a]/30 hover:shadow-[0_4px_8px_rgba(16,45,69,.06)]"><svg class="w-3.5 h-3.5 text-[#176b9a] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>7. Food and agro-processing</li>
         <li class="flex items-center gap-2 rounded-lg border border-[#dce4e7] bg-white px-3 py-2 text-[12.5px] font-semibold text-[#173047] shadow-[0_2px_4px_rgba(16,45,69,.02)] transition hover:border-[#176b9a]/30 hover:shadow-[0_4px_8px_rgba(16,45,69,.06)]"><svg class="w-3.5 h-3.5 text-[#176b9a] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>8. Solar and Electrical Services</li>
       </ul>
-      <div class="values flex flex-wrap gap-2 mb-6">
+      <div class="values flex flex-wrap gap-2">
         <span class="pill rounded-full bg-[#eaf4e8] px-3 py-1.5 text-[10px] font-extrabold text-[#2e684e]">Quality assurance</span>
         <span class="pill rounded-full bg-[#eaf4e8] px-3 py-1.5 text-[10px] font-extrabold text-[#2e684e]">Professional management</span>
         <span class="pill rounded-full bg-[#eaf4e8] px-3 py-1.5 text-[10px] font-extrabold text-[#2e684e]">Safety first</span>
@@ -133,7 +161,7 @@
 <section class="services bg-[#eff6ee] lg:pb-[86px]" id="services">
   <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
     <div class="section-head center max-w-[680px] mb-[38px] text-center mx-auto">
-      <div class="kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">What we do</div>
+      <div class="py-6 kicker text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#f2a900] mb-[13px]">What we do</div>
       <h2>Integrated services, from concept to completion.</h2>
       <p>One technical partner for water, infrastructure and agriculture-related projects. Services can be tailored to the scale and requirements of each assignment.</p>
     </div>
