@@ -11,7 +11,7 @@ const data = {
   accent: '#176b9a',
   badge: 'Water',
   shortTitle: 'Water Supply & Engineering Design',
-  title: 'Solar powered water systems designed and constructed',
+  title: 'Water Supply and Engineering',
   tagline: 'Reliable Water. Resilient communities',
   imageAlt: 'TECO Farms water infrastructure project',
   imageCaptionKicker: 'Solar pumping',
@@ -21,7 +21,8 @@ const data = {
     'TECO Farms & Engineering Ltd delivers integrated engineering solutions through systematic field investigations, feasibility studies, technical design, construction supervision and project commissioning. We combine field-based data collection, modern engineering tools and technical expertise, including GPS surveys, geophysical investigations, Google Earth Pro, GIS, CAD and hydraulic modelling, to develop accurate, efficient and sustainable solutions. Our approach transforms technical assessments into reliable infrastructure, ensuring quality, performance and lasting impact.',
   ],
   highlights: [
-    { value: 'over 200', label: 'taps and kiosks completed' },
+    {value:'Over 13', label: 'Solar Powered Water Supply Systems Completed'},
+    { value: 'over 7', label: 'Irrigation systems constructed' },
     { value: 'over 188', label: 'Boreholes drilled' },
   ],
   offerings: [
