@@ -22,8 +22,8 @@ const data = {
   ],
   highlights: [
     {value:'Over 13', label: 'Solar Powered Water Supply Systems Completed'},
-    { value: 'over 7', label: 'Irrigation systems constructed' },
-    { value: 'over 188', label: 'Boreholes drilled' },
+    { value: 'Over 7', label: 'Irrigation systems constructed' },
+    { value: 'Over 188', label: 'Boreholes drilled' },
   ],
   offerings: [
     ['Engineering, development and environmental consultancy', 'Surface-water and groundwater investigations; hydrogeological and hydrological studies; water-resource assessment and modelling; river assessment, flood-risk mapping and weir/intake studies; engineering designs and technical drawings; environmental screening and impact assessments (EIA/ESIA); feasibility studies, project assessments and evaluations; GIS and spatial analysis; training, capacity building and technical advisory services.'],
