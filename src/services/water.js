@@ -38,7 +38,7 @@ const data = {
   ],
 
   // ---------- Irrigation section (rendered by process()) ----------
-  processKicker: 'Irrigation systems',
+  processKicker: 'Exprole our Irrigation systems',
   processTitle: 'Are you interested in Irrigation Services?',
   processIntro: 'Engineering efficient irrigation systems for sustainable agricultural productivity.',
   process: [
@@ -54,12 +54,10 @@ const data = {
 
   // Each project must be [name, client, period] — all 3 slots filled.
   projects: [
-    ['Borehole drilling and construction of a solar powered water supply system', 'Salima District Council', '2024–2025'],
-    ['Drilling, design and supervision of 8 solar-powered water systems, Zomba', 'Innovation Africa', '2021–2023'],
-    ['Drilling, design and construction of a solar-powered water system with 100 taps, Chikwawa', 'Water For People (via New Vision Construction)', '2023–2024'],
-    ['Maintenance and rehabilitation of a surface water supply system serving 152 water kiosks, Wenya', 'Chitipa District Water Office', '2026'],
-    ['Hydraulic assessment and redesign of a water supply network', 'Habitat For Humanity', '2024–2025'],
-    ['Hydrogeological survey, drilling, mapping and design of a reticulated system for 2 boreholes', 'Water For Life', '2022'],
+    ['Borehole drilling and construction of a solar powered water supply systems'],
+    ['Maintenance and rehabilitation of a surface water supply system serving 152 water kiosks'],
+    ['Hydraulic assessment and redesign of a water supply network'],
+    ['Hydrogeological survey, drilling, mapping and design of a reticulated system for boreholes'],
   ],
 };
 

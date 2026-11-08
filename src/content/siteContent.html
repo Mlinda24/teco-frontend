@@ -312,6 +312,8 @@
 <div class="contact-detail mt-[22px] flex items-start gap-[13px]"><div class="mini-icon w-[38px] h-[38px] shrink-0 rounded-[10px] border border-[#dce4e7] bg-white grid place-items-center">◷</div><div><strong>Business enquiries</strong><span>For service requests, partnerships and proposals.</span></div></div>
 </div><form class="contact-form rounded-2xl border border-[#dce4e7] bg-white p-[18px] lg:p-[27px] shadow-[0_15px_35px_rgba(16,45,69,.03)]" id="contactForm"><div class="form-grid grid grid-cols-1 sm:grid-cols-2 gap-[15px]"><div class="field"><label for="name">Full name</label><input id="name" name="name" placeholder="Your name" required=""/></div><div class="field"><label for="org">Organisation</label><input id="org" name="org" placeholder="Company / organisation"/></div><div class="field"><label for="email">Email address</label><input id="email" name="email" placeholder="you@example.com" required="" type="email"/></div><div class="field"><label for="service">Service of interest</label><select id="service" name="service"><option value="">Select a service</option><option>Water supply systems</option><option>Boreholes &amp; groundwater</option><option>Engineering design</option><option>Solar pumping &amp; irrigation</option><option>WASH &amp; agriculture</option><option>Civil works &amp; supervision</option><option>Hydrology &amp; environment</option><option>Other enquiry</option></select></div><div class="field full sm:col-span-2"><label for="message">Tell us about your project *</label><textarea id="message" name="message" placeholder="Project location, objectives, expected timeline and support needed..." required=""></textarea></div><div class="field full sm:col-span-2"><button class="btn inline-flex items-center justify-center gap-2 px-[19px] py-[13px] rounded-lg bg-[#f2a900] text-white text-[13px] font-extrabold border border-transparent cursor-pointer transition duration-200 hover:-translate-y-0.5 hover:brightness-105 no-underline" type="submit">Prepare enquiry email</button><div class="toast hidden mt-3 text-xs font-extrabold text-[#176b9a]" id="formToast" role="status">Your email draft should open in your email application.</div></div></div></form></div></div></section>
 </main>
+
+
 <footer class="footer bg-[#0b2437] text-[#e8f1f4] py-[52px] pb-[22px]">
   <div class="container mx-auto w-full max-w-[1160px] px-[22px]">
     <div class="footer-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_.8fr_.8fr_1fr_1fr] gap-7 lg:gap-[35px] pb-9">
@@ -329,8 +331,9 @@
           Practical engineering and consultancy services across water supply, groundwater, irrigation, WASH, agriculture and civil infrastructure.
         </p>
       </div>
+
       <div>
-        <h4>Explore</h4>
+        <h4 class="font-bold">Explore</h4>
         <ul>
           <li><a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="#about">About TECO</a></li>
           <li><a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="#services">Our Services</a></li>
@@ -338,21 +341,24 @@
           <li><a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="#team">Our Team</a></li>
         </ul>
       </div>
+
       <div>
-        <h4 class="text-base font-bold text-[#e8f1f4] mb-4">Services section</h4>
+        <h4 class="text-base font-bold text-[#e8f1f4]">Services section</h4>
         <ul>
           <li><a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="/services/water-supply-engineering-design">Water Supply &amp; Engineering Design</a></li>
           <li><a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="/services/engineering-environmental-consultancy">Engineering &amp; Environmental Consultancy</a></li>
           <li><a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="/services/civil-engineering-construction">Civil Engineering &amp; Construction</a></li>
         </ul>
       </div>
+
       <div>
-        <h4>Get in touch</h4>
+        <h4 class="font-bold">Head Office</h4>
         <address class="not-italic text-[13px] leading-[1.8]">
           P.O. Box 253, Zomba, Malawi<br/>
           <a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="tel:+265884234348">+265 884 234 348</a><br/>
           <a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="mailto:tecofarms@gmail.com">tecofarms@gmail.com</a>
         </address>
+
         <div class="social-links flex items-center gap-4 mt-5">
           <a href="https://web.facebook.com/profile.php?id=61578713669639" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:opacity-80 transition-opacity">
             <svg viewBox="0 0 24 24" class="w-5 h-5" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -366,9 +372,9 @@
         </div>
       </div>
       <div>
-        <h4>Lilongwe Regional Office</h4>
+        <h4 class="font-bold">Regional Office</h4>
         <address class="not-italic text-[13px] leading-[1.8]">
-          Area 25 Sector 8 Lilongwe, Malawi<br/>
+          Area 25 Sector 8, Lilongwe, Malawi<br/>
           <a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="tel:+265 996 086 141">+265 996 086 141</a><br/>
           <a class="text-[#e8f1f4] hover:text-[#80d0c7]" href="tecofarms@gmail.com">tecofarms@gmail.com</a>
         </address>
